@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/</link><description>Recent content on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>XiaoYuan</copyright><lastBuildDate>Mon, 30 Sep 2024 11:12:41 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Python基础知识</title><link>https://XiaoYuan-420.gituhub.io/p/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link><pubDate>Mon, 30 Sep 2024 11:12:41 +0800</pubDate><guid>https://XiaoYuan-420.gituhub.io/p/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid><description>&lt;h1 id="python基础知识">Python基础知识
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/</link><description>Recent content on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Mon, 30 Sep 2024 11:12:41 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Python基础知识</title><link>https://XiaoYuan-420.gituhub.io/p/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link><pubDate>Mon, 30 Sep 2024 11:12:41 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid><description>&lt;h1 id="python基础知识">Python基础知识
 &lt;/h1>&lt;h2 id="学前提醒">学前提醒
 &lt;/h2>&lt;p>&lt;strong>一定记得要自己动手编程试试哦~&lt;/strong>&lt;/p>
 &lt;h2 id="python简介">Python简介
@@ -444,7 +444,7 @@ alt="分支结构"
 (1, 1) (1, 2) (3, 1) (3, 2)
 ---------
 (1, 1) (2, 1) (3, 1)
-&lt;/code>&lt;/pre></description></item><item><title>TSCTF-J wp</title><link>https://XiaoYuan-420.gituhub.io/p/tsctf-j-wp/</link><pubDate>Sat, 28 Sep 2024 11:12:41 +0800</pubDate><guid>https://XiaoYuan-420.gituhub.io/p/tsctf-j-wp/</guid><description>&lt;h1 id="tsctf-j-xiaoyuan-writeup">TSCTF-J XiaoYuan Writeup
+&lt;/code>&lt;/pre></description></item><item><title>TSCTF-J wp</title><link>https://XiaoYuan-420.gituhub.io/p/tsctf-j-wp/</link><pubDate>Sat, 28 Sep 2024 11:12:41 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/tsctf-j-wp/</guid><description>&lt;h1 id="tsctf-j-xiaoyuan-writeup">TSCTF-J XiaoYuan Writeup
 &lt;/h1>&lt;h2 id="misc">MISC
 &lt;/h2>&lt;hr>
 &lt;h3 id="set-set-password">set set password
@@ -1006,7 +1006,7 @@ alt="3"
 &lt;p>一开始把&lt;code>冲&lt;/code>对应的&lt;code>.&lt;/code>，发现有一个始终找不到对应，就换了一下&lt;code>冲&lt;/code>对应到&lt;code>-&lt;/code>就对了。翻译完看到&lt;code>===&lt;/code>想到是被编码了，直接&lt;code>CyberChef&lt;/code>解决。&lt;/p>
 &lt;h2 id="web">Web
 &lt;/h2>&lt;h3 id="set-set-whatweb-签到">set set what(WEB 签到)
-&lt;/h3>&lt;p>在公告里找到了出题人的QQ，把滑动条的max设置成出题人QQ，直接拉到最后得到了flag&lt;/p></description></item><item><title>归档</title><link>https://XiaoYuan-420.gituhub.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://XiaoYuan-420.gituhub.io/archives/</guid><description/></item><item><title>关于</title><link>https://XiaoYuan-420.gituhub.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://XiaoYuan-420.gituhub.io/about/</guid><description>&lt;p>Hello，这里是萧垣，一名清澈且愚蠢的大学生。&lt;/p>
+&lt;/h3>&lt;p>在公告里找到了出题人的QQ，把滑动条的max设置成出题人QQ，直接拉到最后得到了flag&lt;/p></description></item><item><title>归档</title><link>https://XiaoYuan-420.gituhub.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/archives/</guid><description/></item><item><title>关于</title><link>https://XiaoYuan-420.gituhub.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/about/</guid><description>&lt;p>Hello，这里是萧垣，一名清澈且愚蠢的大学生。&lt;/p>
 &lt;p>这是我的&lt;a class="link" href="https://space.bilibili.com/355858066" target="_blank" rel="noopener"
 >Bilibili&lt;/a>&lt;/p>
 &lt;p>这是我的&lt;a class="link" href="https://github.com/NTFago" target="_blank" rel="noopener"
@@ -1014,4 +1014,4 @@ alt="3"
 &lt;p>这是我的&lt;a class="link" href="https://space.bilibili.com/1764320858" target="_blank" rel="noopener"
 >Bilibili小号&lt;/a>&lt;/p>
 &lt;p>这是我的&lt;a class="link" href="https://github.com/XiaoYuan-420" target="_blank" rel="noopener"
->GitHub小号&lt;/a>&lt;/p></description></item><item><title>搜索</title><link>https://XiaoYuan-420.gituhub.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://XiaoYuan-420.gituhub.io/search/</guid><description/></item></channel></rss>
+>GitHub小号&lt;/a>&lt;/p></description></item><item><title>搜索</title><link>https://XiaoYuan-420.gituhub.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/search/</guid><description/></item></channel></rss>
