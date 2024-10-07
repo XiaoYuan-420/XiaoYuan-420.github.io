@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/</link><description>Recent content on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Mon, 30 Sep 2024 11:12:41 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Python基础知识</title><link>https://XiaoYuan-420.gituhub.io/p/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link><pubDate>Mon, 30 Sep 2024 11:12:41 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid><description>&lt;h1 id="python基础知识">Python基础知识
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/</link><description>Recent content on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Sat, 05 Oct 2024 14:45:13 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/index.xml" rel="self" type="application/rss+xml"/><item><title>NewStar 第一周 WP</title><link>https://XiaoYuan-420.gituhub.io/p/newstar-%E7%AC%AC%E4%B8%80%E5%91%A8-wp/</link><pubDate>Sat, 05 Oct 2024 14:45:13 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/newstar-%E7%AC%AC%E4%B8%80%E5%91%A8-wp/</guid><description>&lt;h1 id="newstar-第一周-wp">NewStar 第一周 WP
+&lt;/h1>&lt;h2 id="misc">Misc
+&lt;/h2>&lt;h3 id="decompress">decompress
+&lt;/h3>&lt;p>附件是一个很多层的zip压缩包。一路点到最里面，得到一个hint和有加密的压缩包&lt;/p>
+&lt;p>hint提示的是密码的正则表达式 &lt;code>^([a-z]){3}\d[a-z]$&lt;/code> 翻译一下，以3个小写字母打头+1个数字+1个小写字母结尾&lt;/p>
+&lt;p>&lt;code>exp.py&lt;/code>进行密码爆破&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">zipfile&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">itertools&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">string&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">ascii_lowercase&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zipfile_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;decompressit.zip&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zip_file&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">zipfile&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ZipFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">zipfile_name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;r&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">combinations&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">itertools&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">product&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ascii_lowercase&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">repeat&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">combination&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">combinations&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">password&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">combination&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">num&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">password&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">letter&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">ascii_lowercase&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">password&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">letter&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s2">&amp;#34;try:&lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">password&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">try&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">zip_file&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">extractall&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pwd&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">password&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">encode&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s1">&amp;#39;Password found: &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">password&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">except&lt;/span> &lt;span class="ne">Exception&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">password&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">password&lt;/span>&lt;span class="p">[:&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">password&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">password&lt;/span>&lt;span class="p">[:&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>得到密码&lt;code>xtr4m&lt;/code>,然后用&lt;code>7-zip&lt;/code>点开.zip.001得到&lt;strong>true flag&lt;/strong>&lt;code>flag{U_R_th3_ma5ter_0f_dec0mpress}&lt;/code>&lt;/p>
+&lt;p>这里可以直接点.zip.001进行解压缩应该是&lt;code>7-zip&lt;/code>的特性，如果进行和并的话需要进行合并&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">copy &lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="n">B&lt;/span> &lt;span class="mf">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">zip&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">001&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="mf">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">zip&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">002&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="mf">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">zip&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">003&lt;/span> &lt;span class="mf">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">zip&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="笔记区">笔记区
+&lt;/h4>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.runoob.com/regexp/regexp-syntax.html" target="_blank" rel="noopener"
+>正则表达式&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://blog.csdn.net/xiaolong22333/article/details/107498232" target="_blank" rel="noopener"
+>常见的文件头识别和修复&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="pleasingmusic">pleasingMusic
+&lt;/h3>&lt;p>拿到音乐一听，一眼丁真摩斯密码，正向得到&lt;code>. ..- --- .-.- -.--.. . ... .-. --- -- -.--.. ..-- .&lt;/code>，结合题目提示反着来得到&lt;code>. --.. ..--.- -- --- .-. ... . ..--.- -.-. --- -.. .&lt;/code>翻译一下&lt;code>ez_morse_code&lt;/code>&lt;/p>
+&lt;hr>
+&lt;h3 id="whereisflag">WhereIsFlag
+&lt;/h3>&lt;p>虚拟机开Linux环境，nc链接题目环境，用&lt;code>ls&lt;/code>慢慢搜就出来了。&lt;/p>
+&lt;hr>
+&lt;h3 id="labyrinth">Labyrinth
+&lt;/h3>&lt;p>LSB隐写，用&lt;code>StegSolve&lt;/code>在&lt;code>Red plane 0&lt;/code>通道下看到了二维码，扫码得到&lt;code>flag{e33bb7a1-ac94-4d15-8ff7-fd8c88547b43}&lt;/code>&lt;/p>
+&lt;hr>
+&lt;h3 id="兑换码">兑换码
+&lt;/h3>&lt;p>png改宽高&lt;/p>
+&lt;p>用&lt;code>010 Editor&lt;/code>打开，在&lt;code>struct PNG_CHUNK chunk[0]&lt;/code>下的&lt;code>struct PNG_CHUNK_IHDR ihdr&lt;/code>下修改高度就可以看到flag文字。&lt;/p>
+&lt;hr>
+&lt;h2 id="web">Web
+&lt;/h2>&lt;h3 id="headach3">headach3
+&lt;/h3>&lt;p>用&lt;code>hackbar&lt;/code>插件在请求头里加上&lt;code>doctor: true&lt;/code>就行了。&lt;/p>
+&lt;h3 id="会赢吗">会赢吗
+&lt;/h3>&lt;p>第一部分：按&lt;code>F12&lt;/code>看源代码&lt;/p>
+&lt;p>第二部分：在源代码里看到了&lt;code>revealFlag(className)&lt;/code>函数，去控制台输入&lt;code>revealFlag(&amp;quot;4cqu1siti0n&amp;quot;)&lt;/code>拿到flag&lt;/p>
+&lt;p>第三部分：先看&lt;code>script&lt;/code>里的代码，发现把&lt;code>&amp;lt;span id=&amp;quot;state&amp;quot;&amp;gt;标签内的&lt;/code>文字改成解封，再按按钮就得到了。&lt;/p>
+&lt;p>第四部分：有个&lt;code>&amp;lt;noscript&amp;gt;&lt;/code>标签，禁用js后出现无量空处的bottom，单击得到最后一部分。&lt;/p></description></item><item><title>Python基础知识</title><link>https://XiaoYuan-420.gituhub.io/p/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link><pubDate>Mon, 30 Sep 2024 11:12:41 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid><description>&lt;h1 id="python基础知识">Python基础知识
 &lt;/h1>&lt;h2 id="学前提醒">学前提醒
 &lt;/h2>&lt;p>&lt;strong>一定记得要自己动手编程试试哦~&lt;/strong>&lt;/p>
 &lt;h2 id="python简介">Python简介
