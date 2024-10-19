@@ -1,4 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/post/</link><description>Recent content in Posts on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Sat, 05 Oct 2024 14:45:13 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>NewStar 第一周 WP</title><link>https://XiaoYuan-420.gituhub.io/p/newstar-%E7%AC%AC%E4%B8%80%E5%91%A8-wp/</link><pubDate>Sat, 05 Oct 2024 14:45:13 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/newstar-%E7%AC%AC%E4%B8%80%E5%91%A8-wp/</guid><description>&lt;h1 id="newstar-第一周-wp">NewStar 第一周 WP
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/post/</link><description>Recent content in Posts on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Sat, 19 Oct 2024 15:41:42 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Intro</title><link>https://XiaoYuan-420.gituhub.io/p/intro/</link><pubDate>Sat, 19 Oct 2024 15:41:42 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/intro/</guid><description>&lt;h1 id="intro">Intro
+&lt;/h1>&lt;h2 id="what-is-machine-learning">what is machine learning
+&lt;/h2>&lt;ol>
+&lt;li>让机器具备找一个函数的能力
+&lt;ol>
+&lt;li>语音识别
+&lt;blockquote>
+&lt;p>输入：声音信号&lt;/p>
+&lt;p>输出：文字&lt;/p>
+&lt;p>这个函数很复杂，人类无法编写出，让机器自己找到这个函数的过程便是机器学习&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>图像识别&lt;/li>
+&lt;li>阿尔法狗&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="different-types-of-function">different types of function
+&lt;/h2>&lt;ol>
+&lt;li>&lt;code>regression&lt;/code>：输出为数值（scalar）&lt;/li>
+&lt;li>&lt;code>classification&lt;/code>：分类（classes）&lt;/li>
+&lt;li>&lt;code>structured learning&lt;/code>：创造&lt;/li>
+&lt;/ol>
+&lt;h2 id="training">training
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>含参函数&lt;/p>
+&lt;p>$y = b + wx_1$ -&amp;gt; &lt;code>Model&lt;/code> -&amp;gt; &lt;code>Linear&lt;/code>&lt;/p>
+&lt;p>$x,y$ -&amp;gt; &lt;code>feature&lt;/code>&lt;/p>
+&lt;p>$w$ -&amp;gt; &lt;code>weight&lt;/code>&lt;/p>
+&lt;p>$b$ -&amp;gt; &lt;code>bias&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Loss&lt;/p>
+&lt;p>$L(b, w)$ 来自于训练集&lt;/p>
+&lt;p>$x_1$ -&amp;gt; $0.5k + 1x_1 = y$ -&amp;gt; $\widehat{y}$ -&amp;gt; &lt;code>label&lt;/code>&lt;/p>
+&lt;p>$e_1 = |y - \widehat{y}| &amp;hellip;$ -&amp;gt; &lt;code>Loss&lt;/code>: $L = \frac{1}{N}\sum_{n}^N e_n$&lt;/p>
+&lt;p>$e = |y - \widehat{y}|$ -&amp;gt; &lt;code>MAE&lt;/code>&lt;/p>
+&lt;p>$e = (y - \widehat{y})^2$ -&amp;gt; &lt;code>MSE&lt;/code>&lt;/p>
+&lt;p>If $y$ and $\widehat{y}$ are bath probability distributions -&amp;gt; &lt;code>Cross-entropy&lt;/code>&lt;/p>
+&lt;p>&lt;code>error surface&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>optimization&lt;/p>
+&lt;p>$w^&lt;em>, b^&lt;/em> = arg \min_{w, b}{L}$&lt;/p>
+&lt;p>&lt;strong>&lt;code>gradient descent&lt;/code>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>随机选取 $w^0$&lt;/li>
+&lt;li>计算 $w$ 对 $L$ 的微分在$w^0$处的值&lt;/li>
+&lt;li>斜率为负，增加 $w$ ；斜率为正，减小 $w$&lt;/li>
+&lt;li>增大和减小的数值根据&lt;code>斜率&lt;/code>和&lt;code>学习率来决定&lt;/code> &lt;code>hyperparameters&lt;/code>&lt;/li>
+&lt;li>$w^0$ -&amp;gt; $w^1$ -&amp;gt; &amp;hellip;&lt;/li>
+&lt;li>更新次数/$w^tt = 0$ 停止&lt;/li>
+&lt;li>&lt;code>global minima&lt;/code> &lt;code>local minima&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>evaluation&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>NewStar 第一周 WP</title><link>https://XiaoYuan-420.gituhub.io/p/newstar-%E7%AC%AC%E4%B8%80%E5%91%A8-wp/</link><pubDate>Sat, 05 Oct 2024 14:45:13 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/newstar-%E7%AC%AC%E4%B8%80%E5%91%A8-wp/</guid><description>&lt;h1 id="newstar-第一周-wp">NewStar 第一周 WP
 &lt;/h1>&lt;h2 id="misc">Misc
 &lt;/h2>&lt;h3 id="decompress">decompress
 &lt;/h3>&lt;p>附件是一个很多层的zip压缩包。一路点到最里面，得到一个hint和有加密的压缩包&lt;/p>
