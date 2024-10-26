@@ -1,4 +1,198 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/post/</link><description>Recent content in Posts on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Sat, 19 Oct 2024 15:41:42 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Intro</title><link>https://XiaoYuan-420.gituhub.io/p/intro/</link><pubDate>Sat, 19 Oct 2024 15:41:42 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/intro/</guid><description>&lt;h1 id="intro">Intro
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/post/</link><description>Recent content in Posts on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Thu, 24 Oct 2024 22:35:40 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>BuildCTF WP Misc部分</title><link>https://XiaoYuan-420.gituhub.io/p/buildctf-wp-misc%E9%83%A8%E5%88%86/</link><pubDate>Thu, 24 Oct 2024 22:35:40 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/buildctf-wp-misc%E9%83%A8%E5%88%86/</guid><description>&lt;h1 id="buildctf-wp-misc部分">BuildCTF WP Misc部分
+&lt;/h1>&lt;p>&lt;em>第一次和各位师傅把misc AK了，太强了，太有成就感了！感谢各位&lt;/em>&lt;/p>
+&lt;h2 id="what-is-this">what is this?
+&lt;/h2>&lt;p>from binary得到&lt;/p>
+&lt;blockquote>
+&lt;p>ccc,ppppp,ccppcp,p,cccc,cpppp,ccc,ccppcp,cpppp,ccccc,ccppcp,pp,ppppp,cpc,ccccc,c,ccppcp,pcpc,ppppp,pcc,c,ccppcp,pcpcpp,pcpcpp&lt;/p>
+&lt;/blockquote>
+&lt;p>将&lt;code>c&lt;/code>对应&lt;code>.&lt;/code>，&lt;code>p&lt;/code> 对应&lt;code>-&lt;/code> 得到&lt;code>S0_TH1S_15_M0R5E_C0DE_!!&lt;/code>&lt;/p>
+&lt;h2 id="别真给我开盒了哥">别真给我开盒了哥
+&lt;/h2>&lt;p>根据图片搜S3901找到&lt;a class="link" href="https://www.bilibili.com/video/BV1Wc411Z7cR/?share_source=copy_web&amp;amp;vd_source=aee69620965121d361d7a9f8a6c029aa&amp;amp;t=84" target="_blank" rel="noopener"
+>视频&lt;/a>&lt;/p>
+&lt;p>知道是S3700高速，找一下旁边平行的铁路有津霸客运专线，也就是&lt;code>津保铁路&lt;/code>&lt;/p>
+&lt;h2 id="如果再来一次还会选择我吗">如果再来一次，还会选择我吗？
+&lt;/h2>&lt;p>看一眼文件头和文件尾，是两个字节之间的交换&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">with&lt;/span> &lt;span class="nb">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;password.png&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;rb&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">file&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">bytearray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">file&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">read&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 交换每两个相邻字节&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">data&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 将修改后的数据写入新文件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">with&lt;/span> &lt;span class="nb">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;output_file.png&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;wb&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">file&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">file&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">data&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>得到解压密码：&lt;code>8!67adz6&lt;/code>，在线网站直接扫条形码得到&lt;code>key:wo_bu_shi_xiao_hei_zi!!!&lt;/code>，最后套好几次 Base64 解出 &lt;code>BuildCTF{y0u_are_great_boy}&lt;/code>&lt;/p>
+&lt;h2 id="老色批">老色批
+&lt;/h2>&lt;p>lsb隐写，提取Red0 Green0 Blue0按Row，LSBfirst得到 &lt;code>QnVpbGRDVEZ7MV9hbV9uMHRfTFNCISEhfQ==&lt;/code> Base64解码一下得到flag &lt;code>BuildCTF{1_am_n0t_LSB!!!}&lt;/code>&lt;/p>
+&lt;h2 id="一念愚即般若绝一念智即般若生">一念愚即般若绝，一念智即般若生
+&lt;/h2>&lt;p>阴阳怪气加密+与佛论禅+&lt;a class="link" href="https://github.com/BlackCat184/Sealed-Book" target="_blank" rel="noopener"
+>天书奇谈&lt;/a>+Base58&lt;/p>
+&lt;p>&lt;code>BuildCTF{D3crypt10n_1s_4_l0ng_r04d}&lt;/code>&lt;/p>
+&lt;h2 id="四妹你听我解释">四妹，你听我解释
+&lt;/h2>&lt;p>winhex打开在文件末尾(IEND后)得到密文的前半段，crc爆破图片原有长宽得到密文后半段，组合起来核心价值观解密得到flag&lt;/p>
+&lt;blockquote>
+&lt;p>密文：自由文明法治平等公正敬业公正友善公正公正自由自由和谐平等自由自由公正法治友善平等公正诚信文明公正民主公正诚信平等平等诚信平等法治和谐公正平等平等友善敬业法治富强和谐民主法治诚信和谐&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>BuildCTF{lao_se_p1}&lt;/code>&lt;/p>
+&lt;h2 id="白白的真好看">白白的真好看
+&lt;/h2>&lt;p>flag1:打开doc文件，在字体样式中把隐藏文字关了，得到第一部分&lt;code>BuildCTF{Th3_wh1t3&lt;/code>&lt;/p>
+&lt;p>flag2:打开第1个txt文件，看到文件名00000000结合文档空白的内容联想到零宽隐写，在线网站得&lt;code>_y0u_s33&lt;/code>&lt;/p>
+&lt;p>flag3:扫描汉信码关注公众号回复雪得到&lt;code>snowsnow&lt;/code>，结合第2个txt的文件名和内容中出现的许多空格和制表符，查到snow隐写，snowsnow为密钥，得&lt;code>_1s_n0t_wh1t3&lt;/code>&lt;/p>
+&lt;h2 id="四妹还是萍萍呢">四妹？还是萍萍呢？
+&lt;/h2>&lt;p>二维码拼图，扫码得到林风云公众号。&lt;/p>
+&lt;p>binwalk检查图片，发现End of Zip archive，winhex打开后定位到对应的IDAT，在这个IDAT头部发现0304，是zip文件头的一半。将这个IDAT提取出来，补全文件头，发现压缩包里包含公众号回复&lt;code>password有惊喜.txt&lt;/code>，发送后得到&lt;code>St7wg.&lt;/code>。用密码解压，发现txt里是base64编码的png，转换后进行crc爆破，得到&lt;code>BuildCTF{PNG_@nd_H31Sh3nHu@}&lt;/code>&lt;/p>
+&lt;h2 id="食不食油饼">食不食油饼
+&lt;/h2>&lt;p>文字盲水印PuzzleSolver提取，b64得到&lt;code>key:7gkjT!opo&lt;/code>&lt;/p>
+&lt;p>key.jpg用WaterMarkH提取&lt;code>8GMdP3&lt;/code>&lt;/p>
+&lt;p>flag.txt &amp;gt; IJ2WS3DEINKEM62XMF2DG4SNMFZGWXZRONPVGMC7MVQVG6L5&lt;/p>
+&lt;p>b32 &amp;gt; BuildCTF{Wat3rMark_1s_S0_eaSy}&lt;/p>
+&lt;h2 id="ez_zip">EZ_ZIP
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">shutil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">499&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">shutil&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">unpack_archive&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s2">&amp;#34;./layer_&lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">.zip&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">f&lt;/span>&lt;span class="s2">&amp;#34;./&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;zip&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="有黑客">有黑客！！！
+&lt;/h1>&lt;p>哥斯拉webshell流量，stream 11809中，解密返回payload。&lt;/p>
+&lt;p>&lt;code>Buildctf{WireshArk_1s_vEry_Ez}&lt;/code>&lt;/p>
+&lt;p>stream 11809: /uploads/shell.php 哥斯拉&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">@&lt;/span>&lt;span class="nx">session_start&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">@&lt;/span>&lt;span class="nx">set_time_limit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">@&lt;/span>&lt;span class="nx">error_reporting&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">function&lt;/span> &lt;span class="nf">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$D&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nv">$K&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="nv">$i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$D&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="nv">$i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$K&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">$i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="mi">15&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$D&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">$i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$D&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">$i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">^&lt;/span>&lt;span class="nv">$c&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nv">$D&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$pass&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;hhhhacker&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$payloadName&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;payload&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$key&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;73b761208d5c05f2&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">isset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$_POST&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">$pass&lt;/span>&lt;span class="p">])){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$data&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nx">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">base64_decode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$_POST&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">$pass&lt;/span>&lt;span class="p">]),&lt;/span>&lt;span class="nv">$key&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">isset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$_SESSION&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">$payloadName&lt;/span>&lt;span class="p">])){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$payload&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nx">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$_SESSION&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">$payloadName&lt;/span>&lt;span class="p">],&lt;/span>&lt;span class="nv">$key&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//Encode payload with $key.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">strpos&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$payload&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s2">&amp;#34;getBasicsInfo&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">===&lt;/span>&lt;span class="k">false&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$payload&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nx">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$payload&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nv">$key&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//Decode payload with $key.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">eval&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$payload&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">echo&lt;/span> &lt;span class="nx">substr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">md5&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$pass&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nv">$key&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">echo&lt;/span> &lt;span class="nx">base64_encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="nx">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$data&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="nv">$key&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">echo&lt;/span> &lt;span class="nx">substr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">md5&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$pass&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="nv">$key&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>&lt;span class="k">else&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">strpos&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$data&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s2">&amp;#34;getBasicsInfo&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">!==&lt;/span>&lt;span class="k">false&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$_SESSION&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">$payloadName&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nx">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$data&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nv">$key&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="心算">心算
+&lt;/h2>&lt;p>&lt;code>__𝑖𝑚𝑝𝑜𝑟𝑡__(&amp;quot;\157\163&amp;quot;).𝑠𝑦𝑠𝑡𝑒𝑚(&amp;quot;\143\141\164\40\146\154\141\147&amp;quot;)&lt;/code>&lt;/p>
+&lt;h2 id="guesscoin">Guesscoin
+&lt;/h2>&lt;p>nc连接容器，发现欢迎来到硬币猜测游戏!你需要猜100次,猜对60次才能获得flag。&lt;/p>
+&lt;p>简单尝试一次，就通过了。&lt;/p>
+&lt;p>恭喜你！你猜对了64次 欢迎拿到flag:&lt;/p>
+&lt;h2 id="我太喜欢亢金星君了">我太喜欢亢金星君了！
+&lt;/h2>&lt;p>白图是分隔，黑图不用管&lt;/p>
+&lt;blockquote>
+&lt;p>-&amp;hellip; ..- .. .-.. -.. -.-. - ..-. &amp;mdash;-.&amp;ndash; .&amp;ndash; &amp;hellip;.- .&amp;mdash;- -.-. &amp;mdash; &amp;ndash; &amp;hellip;.- ..&amp;ndash;.- -. &amp;hellip;.- .&amp;ndash; ..&amp;ndash;.- ..-. .&amp;mdash;- &amp;hellip; &amp;hellip;. &amp;mdash;-.-&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>BUILDCTFW41COM4_N4W_F1SH&lt;/code>&lt;/p>
+&lt;h2 id="blackwhite">Black&amp;amp;White
+&lt;/h2>&lt;p>文件夹里有1089张纯黑/纯白的方形图片，猜测可以拼成33*33的二维码。&lt;/p>
+&lt;p>使用python拼图，扫码得到 &lt;code>3I8XEDHUCJTARQFOEDX7D+08AC80T8N08Y6948DF2C43C9B6Z2&lt;/code>，使用Base45解码，得到flag。&lt;/p>
+&lt;p>&lt;code>BuildCTF{Tich1?pAnDa?_HahA_U_w1n}&lt;/code>&lt;/p>
+&lt;h2 id="hex的秘密">HEX的秘密
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">with&lt;/span> &lt;span class="nb">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;flag.txt&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;r&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">encoding&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;utf-8&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">f&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">flag&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">f&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">read&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">flag&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">flag&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nb">hex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">16&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">^&lt;/span> &lt;span class="mh">0x80&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">flag&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>得到&lt;code>0x420x750x690x6c0x640x430x540x460x7b0x330x450x7a0x7a0x5f0x410x350x630x210x210x5f0x620x690x6e0x610x720x790x790x790x7d&lt;/code>&lt;/p>
+&lt;p>from hex 得到 &lt;code>BuildCTF{3Ezz_A5c!!_binaryyy}&lt;/code>&lt;/p>
+&lt;h2 id="findyourwindows">FindYourWindows
+&lt;/h2>&lt;p>用veracyrypt挂载，diskgenius恢复回收站里的文件找到flag.txt，得到&lt;code>BuildCTF{I2t_s0_e5sy!!!}&lt;/code>&lt;/p>
+&lt;h2 id="e2__21p">E2_?_21P
+&lt;/h2>&lt;p>将加密的两个标志位改成0，解压发现CRC校验失败，在010中将源数据区和目录区的压缩方法修改，BrainFuck解密得到&lt;code>BuildCTF{Da7A_Cowbr355lon_15_3A5Y}&lt;/code>&lt;/p></description></item><item><title>Intro</title><link>https://XiaoYuan-420.gituhub.io/p/intro/</link><pubDate>Sat, 19 Oct 2024 15:41:42 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/intro/</guid><description>&lt;h1 id="intro">Intro
 &lt;/h1>&lt;h2 id="what-is-machine-learning">what is machine learning
 &lt;/h2>&lt;ol>
 &lt;li>让机器具备找一个函数的能力
