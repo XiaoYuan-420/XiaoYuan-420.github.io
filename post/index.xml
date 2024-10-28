@@ -1,4 +1,243 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/post/</link><description>Recent content in Posts on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Thu, 24 Oct 2024 22:35:40 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>BuildCTF WP Misc部分</title><link>https://XiaoYuan-420.gituhub.io/p/buildctf-wp-misc%E9%83%A8%E5%88%86/</link><pubDate>Thu, 24 Oct 2024 22:35:40 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/buildctf-wp-misc%E9%83%A8%E5%88%86/</guid><description>&lt;h1 id="buildctf-wp-misc部分">BuildCTF WP Misc部分
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/post/</link><description>Recent content in Posts on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Mon, 28 Oct 2024 15:43:08 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>编码系列</title><link>https://XiaoYuan-420.gituhub.io/p/%E7%BC%96%E7%A0%81%E7%B3%BB%E5%88%97/</link><pubDate>Mon, 28 Oct 2024 15:43:08 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E7%BC%96%E7%A0%81%E7%B3%BB%E5%88%97/</guid><description>&lt;h1 id="编码系列持续更新">编码系列(持续更新)
+&lt;/h1>&lt;h2 id="base家族">Base家族
+&lt;/h2>&lt;h3 id="base16">Base16
+&lt;/h3>&lt;ul>
+&lt;li>使用16个ASCII可打印字符（数字0-9和字母A-F），对任意字节数据进行编码。&lt;/li>
+&lt;li>先获取输入字符串每个字节的二进制值（不足8比特在高位补0），然后将其串联进来，再按照4比特一组进行切分，将每组二进制数分别转换成十进制。&lt;/li>
+&lt;li>Base16编码后的数据量是原数据的两倍：1000比特数据需要250个字符（即 250*8=2000 比特）。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>注：&lt;/strong> 可以看到8比特数据按照4比特切分刚好是两组，所以Base16不可能用到填充符号&lt;code>=&lt;/code>。&lt;/p>
+&lt;p>换句话说：Base16使用两个ASCII字符去编码原数据中的一个字节数据。&lt;/p>
+&lt;p>Base16编码是一个标准的十六进制字符串（注意是字符串而不是数值），更易被人类和计算机使用，因为它并不包含任何控制字符，以及Base64和Base32中的&lt;code>=&lt;/code>符号。&lt;/p>
+&lt;h3 id="base32">Base32
+&lt;/h3>&lt;ul>
+&lt;li>Base32编码是使用32个可打印字符（字母A-Z和数字2-7）对任意字节数据进行编码的方案，编码后的字符串不用区分大小写并排除了容易混淆的字符，可以方便地由人类使用并由计算机处理。&lt;/li>
+&lt;li>Base32主要用于编码二进制数据，但是Base32也能够编码诸如ASCII之类的二进制文本。&lt;/li>
+&lt;li>Base32将任意字符串按照字节进行切分，并将每个字节对应的二进制值（不足8比特高位补0）串联起来，按照5比特一组进行切分，并将每组二进制值转换成十进制来对应32个可打印字符中的一个。&lt;/li>
+&lt;/ul>
+&lt;p>由于数据的二进制传输是按照8比特一组进行（即一个字节），因此Base32按5比特切分的二进制数据必须是40比特的倍数（5和8的最小公倍数）。&lt;/p>
+&lt;p>例如输入单字节字符&lt;code>%&lt;/code>，它对应的二进制值是&lt;code>100101&lt;/code>，前面补两个0变成&lt;code>00100101&lt;/code>（二进制值不足8比特的都要在高位加0直到8比特），从左侧开始按照5比特切分成两组：&lt;code>00100&lt;/code>和&lt;code>101&lt;/code>，后一组不足5比特，则在末尾填充0直到5比特，变成&lt;code>00100&lt;/code>和&lt;code>10100&lt;/code>，这两组二进制数分别转换成十进制数，通过上述表格即可找到其对应的可打印字符&lt;code>E&lt;/code>和&lt;code>U&lt;/code>，但是这里只用到两组共10比特，还差30比特达到40比特，按照5比特一组还需6组，则在末尾填充6个&lt;code>=&lt;/code>。填充&lt;code>=&lt;/code>符号的作用是方便一些程序的标准化运行，大多数情况下不添加也无关紧要，而且，在URL中使用时必须去掉&lt;code>=&lt;/code>符号。&lt;/p>
+&lt;h3 id="base64">Base64
+&lt;/h3>&lt;ul>
+&lt;li>Base64是一种基于64个可打印字符来表示二进制数据的表示方法。由于 $2^6=64$ ，所以每6个比特为一个单元，对应某个可打印字符。3个字节有24个比特，对应于4个Base64单元，即3个字节可由4个可打印字符来表示。&lt;/li>
+&lt;/ul>
+&lt;p>注：BinHex的版本使用不同的64字符集来代表6个二进制数字，但是不被称为Base64。&lt;/p>
+&lt;p>如果要编码的字节数不能被3整除，最后会多出1个或2个字节，那么可以使用下面的方法进行处理：&lt;/p>
+&lt;ol>
+&lt;li>先使用0字节值在末尾补足，使其能够被3整除，然后再进行Base64的编码。&lt;/li>
+&lt;li>在编码后的Base64文本后加上一个或两个=号，代表补足的字节数。&lt;/li>
+&lt;/ol>
+&lt;p>也就是说：&lt;/p>
+&lt;p>当最后剩余两个八位(待补足)字节（2个byte）时，最后一个6位的Base64字节块有四位是0值，最后附加上两个等号；&lt;/p>
+&lt;p>如果最后剩余一个八位(待补足)字节（1个byte）时，最后一个6位的base字节块有两位是0值，最后附加一个等号。&lt;/p>
+&lt;h2 id="md5">MD5
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">明文：admin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">32位小写21232f297a57a5a743894a0e4a801fc3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">32位大写21232F297A57A5A743894A0E4A801FC3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">16位小写7a57a5a743894a0e
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">16位大写7A57A5A743894A0E
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tips：十六位其实就是取32位的8-24位
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>MD5 加密后的密文应该是 纯数字+纯字符&lt;/p>
+&lt;h2 id="emoji-aes编码">emoji-aes编码
+&lt;/h2>&lt;ul>
+&lt;li>emoji-aes使用对称aes加密密码加密字符串数据，然后用emojis替换Base64输出。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Message: flag
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Key: f@1g
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">encryption: 🙃💵🌿🎤🚪🌏🐎🥋🚫😆😍🚫🌊📮🐘🖐🌉🥋✉🕹🎃☂🎤🎈🥋🐘✅🌪🕹🍌👌🎅🚨☃☀🕹🍵📂😆😍😁📂❓🗒
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a class="link" href="https://aghorler.github.io/emoji-aes/" target="_blank" rel="noopener"
+>emoji-aes&lt;/a>&lt;/p>
+&lt;h2 id="词频分析">词频分析
+&lt;/h2>&lt;p>一堆文字，看着什么编码都不像的，可能是词频分析，用&lt;a class="link" href="https://quipqiup.com/" target="_blank" rel="noopener"
+>在线网站&lt;/a>跑&lt;/p>
+&lt;h2 id="字频分析">字频分析
+&lt;/h2>&lt;p>通常是给了一大段文字，然后用随波逐流分析就好&lt;/p>
+&lt;h2 id="摩斯电码">摩斯电码
+&lt;/h2>&lt;p>变种很多，直接用厨子跑就行&lt;/p>
+&lt;h2 id="维吉尼亚密码">维吉尼亚密码
+&lt;/h2>&lt;p>一种典型的多表替换密码&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>给了密文和Key&lt;/p>
+&lt;p>直接拉到cyberchef中解密即可&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>给了密文，没给密钥，但是知道目标明文的格式&lt;/p>
+&lt;p>先用B神的脚本爆破出Key，然后再把这个Key放到cyberchef中解密&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>根据对照表，手搓密钥的前几位&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="希尔密码">希尔密码
+&lt;/h2>&lt;p>&lt;a class="link" href="http://www.metools.info/code/hillcipher243.html" target="_blank" rel="noopener"
+>解密网站&lt;/a>&lt;/p>
+&lt;p>已知密文和密钥，并且密钥(key)是一个网址，如&lt;code>http://www.verymuch.net&lt;/code>&lt;/p>
+&lt;p>已知密文和密钥，并且密钥是四个数字&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">密文：exky
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">密钥：11 45 1 4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="rabbi密码">Rabbi密码
+&lt;/h2>&lt;p>已知密文和密钥，密文有点像base64编码的(可能有+号)&lt;/p>
+&lt;h2 id="云隐密码">云隐密码
+&lt;/h2>&lt;p>特征是：密文只由01248组成&lt;/p>
+&lt;p>用随波逐流中的脚本直接跑&lt;/p>
+&lt;h2 id="社会主义核心价值观密码">社会主义核心价值观密码
+&lt;/h2>&lt;p>&lt;a class="link" href="http://www.hiencode.com/cvencode.html" target="_blank" rel="noopener"
+>解密网址&lt;/a>&lt;/p>
+&lt;p>&lt;code>公正民主公正文明公正和谐&lt;/code>：&lt;code>abc&lt;/code>&lt;/p>
+&lt;h2 id="盲文">盲文
+&lt;/h2>&lt;p>使用&lt;a class="link" href="https://www.qqxiuzi.cn/bianma/wenbenjiami.php?s=mangwen" target="_blank" rel="noopener"
+>在线翻译&lt;/a>&lt;/p>
+&lt;h2 id="音乐符号">音乐符号
+&lt;/h2>&lt;p>Tips：这里要注意，加密的密文一定是以=结尾的，有时候需要自己把=加上&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">eg：♭♯♪‖¶♬♭♭♪♭‖‖♭♭♬‖♫♪‖♩♬‖♬♬♭♭♫‖♩♫‖♬♪♭♭♭‖¶∮‖‖‖‖♩♬‖♬♪‖♩♫♭♭♭♭♭§‖♩♩♭♭♫♭♭♭‖♬♭‖¶§♭♭♯‖♫∮‖♬¶‖¶∮‖♬♫‖♫♬‖♫♫§=
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>直接用&lt;a class="link" href="https://www.qqxiuzi.cn/bianma/wenbenjiami.php?s=yinyue" target="_blank" rel="noopener"
+>在线网站&lt;/a>解密&lt;/p>
+&lt;h2 id="polybius密码棋盘密码">Polybius密码（棋盘密码）
+&lt;/h2>&lt;p>&lt;a class="link" href="https://ctf-wiki.org/crypto/classical/polyalphabetic/?h=polybius#polybius" target="_blank" rel="noopener"
+>CTFWiki&lt;/a>上有详细介绍，如果给了一串数字但是用16进制出不来的话，可以试一下。&lt;/p>
+&lt;h2 id="埃特巴什码atbash">埃特巴什码(Atbash)
+&lt;/h2>&lt;p>类似于：&lt;code>(+w)v&amp;amp;LdG_FhgKhdFfhgahJfKcgcKdc_eeIJ_gFN&lt;/code>&lt;/p>
+&lt;p>拉入厨子直接解密&lt;/p>
+&lt;h2 id="dna编码">DNA编码
+&lt;/h2>&lt;p>使用CTFD中的&lt;a class="link" href="https://github.com/omemishra/DNA-Genetic-Python-Scripts-CTF" target="_blank" rel="noopener"
+>DNAcode&lt;/a>脚本解密，随波逐流里面也有。&lt;/p>
+&lt;h2 id="decabit编码">Decabit编码
+&lt;/h2>&lt;p>正常的 Decabit编码 是十个字符一组的，如果不是十个一组，就很可能不是 Decabit编码&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">+-+-++–+- ++—+-++- -+–++-++- +–++-++– –+++++— ++-++—+- +++-+-+— +-+-+—++ —+++-++- -+–++-++- -+–+++-+- -+–++-++- -+–++-++- ++-+-+-+– -+–+++-+- ++-++—+- -++++—+- -+–++-++- ++-+-+-+– +-+++—+- +++-++—- —+++-++- +-+-+—++ ++-+-+-+– +-+-+–++- ++–+–++- -++++—+- +—+++-+- ++-+-+-+– -++++—+- -+–+++-+- +–+-+-++- +++-+-+— +-+++—+- -+–+-+++- -+–++-++- —+++-++- ++++—-+- -++++—+- -+–+++-+- -+–++-++- —-+++++-
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a class="link" href="https://www.dcode.fr/decabit-code" target="_blank" rel="noopener"
+>在线网站&lt;/a>解。&lt;/p>
+&lt;h2 id="仿射密码">仿射密码
+&lt;/h2>&lt;p>有两个key，key-a为必须是(1,3,5,7,9,11,15,17,19,21,23,25)中的一个,key-b是0~25的数字&lt;/p>
+&lt;p>可以使用&lt;a class="link" href="http://www.hiencode.com/affine.html" target="_blank" rel="noopener"
+>在线网站&lt;/a>解。&lt;/p>
+&lt;h2 id="brainfuck编码">BrainFuck编码
+&lt;/h2>&lt;p>随波逐流解。感觉和Decabit点像？&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">+++++ +++[- &amp;gt;++++ ++++&amp;lt; ]&amp;gt;++. &amp;lt;++++ +++[- &amp;gt;++++ +++&amp;lt;] &amp;gt;++.&amp;lt; +++[- &amp;gt;---&amp;lt; ]&amp;gt;--- .+++. ----- ---.&amp;lt; +++++ [-&amp;gt;-- ---&amp;lt;] &amp;gt;---- ----. &amp;lt;++++ [-&amp;gt;++ ++&amp;lt;]&amp;gt; +.&amp;lt;++ +[-&amp;gt;- --&amp;lt;]&amp;gt; ----- .&amp;lt;+++ ++++[ -&amp;gt;+++ ++++&amp;lt; ]&amp;gt;+++ +.&amp;lt;++ +++++ [-&amp;gt;-- ----- &amp;lt;]&amp;gt;-- ----. &amp;lt;++++ +[-&amp;gt;+ ++++&amp;lt; ]&amp;gt;+++ +.&amp;lt;++ ++++[ -&amp;gt;--- ---&amp;lt;] &amp;gt;---- --.&amp;lt;+ ++[-&amp;gt; +++&amp;lt;] &amp;gt;+.&amp;lt;+ ++++[ -&amp;gt;+++ ++&amp;lt;]&amp;gt; +++++ .&amp;lt;+++ ++[-&amp;gt; ----- &amp;lt;]&amp;gt;-- -.&amp;lt;++ ++++[ -&amp;gt;+++ +++&amp;lt;] &amp;gt;++++ ++++. +++++ +++.&amp;lt; ++++[ -&amp;gt;--- -&amp;lt;]&amp;gt;- ----. &amp;lt;++++ [-&amp;gt;++ ++&amp;lt;]&amp;gt; .&amp;lt;+++ ++++[ -&amp;gt;--- ----&amp;lt; ]&amp;gt;--- ----- ----- -.++. .&amp;lt;+++ ++++[ -&amp;gt;+++ ++++&amp;lt; ]&amp;gt;+++ +++.+ ++.-. &amp;lt;+++[ -&amp;gt;--- &amp;lt;]&amp;gt;-- ----. &amp;lt;++++ ++[-&amp;gt; ----- -&amp;lt;]&amp;gt;- ----- ----. ++++. &amp;lt;++++ ++[-&amp;gt; +++++ +&amp;lt;]&amp;gt;+ +++++ .&amp;lt;+++ +++[- &amp;gt;---- --&amp;lt;]&amp;gt; ----- ---.&amp;lt; +++[- &amp;gt;+++&amp;lt; ]&amp;gt;+++ ++.&amp;lt;+ ++[-&amp;gt; ---&amp;lt;] &amp;gt;---. &amp;lt;++++ ++[-&amp;gt; +++++ +&amp;lt;]&amp;gt;. &amp;lt;++++ ++[-&amp;gt; +++++ +&amp;lt;]&amp;gt;. &amp;lt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="gronsfeld密码">Gronsfeld密码
+&lt;/h2>&lt;p>没遇到过什么样的，但是在网上看到了，也没给示例，就贴了一个解密脚本。不懂什么意思。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 解密脚本&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">pycipher&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">Gronsfeld&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">cipher&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;TGLBOMSJNSRAJAZDEZXGHSJNZWHG&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">key&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">61&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">63&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">41&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">secret&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Gronsfeld&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">key&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">decipher&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">cipher&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">secret&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="uuencode编码">UUencode编码
+&lt;/h2>&lt;h2 id="aaencode编码">AAencode编码
+&lt;/h2>&lt;h2 id="xxencode编码">XXencode编码
+&lt;/h2>&lt;p>上面三个统统拉到厨子里&lt;/p>
+&lt;h2 id="snow隐写">snow隐写
+&lt;/h2>&lt;p>空格和制表符组成的，并不是零宽字符，用snow解。&lt;/p>
+&lt;h2 id="零宽字符隐写">零宽字符隐写
+&lt;/h2>&lt;p>应该挺好看出来的，直接在线网站解就好了。&lt;/p>
+&lt;h2 id="文字盲水印">文字盲水印
+&lt;/h2>&lt;p>很明显的一个标志就是文本里有&lt;code>DEL&lt;/code>删除符，用PuzzleSolver解。&lt;/p>
+&lt;h2 id="阴阳怪气">阴阳怪气
+&lt;/h2>&lt;h2 id="与佛论禅">与佛论禅
+&lt;/h2>&lt;h2 id="与熊论道">与熊论道
+&lt;/h2>&lt;h2 id="天书奇谈">天书奇谈
+&lt;/h2>&lt;h2 id="无字天书">无字天书
+&lt;/h2>&lt;h2 id="中文电报中文电码">中文电报（中文电码）
+&lt;/h2>&lt;h2 id="quote-printable编码">Quote-Printable编码
+&lt;/h2>&lt;p>类似于下面这样的编码，直接拉进厨子解。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">flag{ichunqiu_=E6=8A=80=E6=9C=AF=E6=9C=89=E6=B8=A9=E5=BA=A6}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flag{ichunqiu_技术有温度}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="中文ascii码">中文ascii码
+&lt;/h2>&lt;h2 id="培根密码">培根密码
+&lt;/h2>&lt;p>由 a、b 或者 A、B 或者 0、1 组成的密文，密文中只有两种字符，可以直接使用 随波逐流 解密&lt;/p>
+&lt;p>Tips：CyberChef 的培根密码解密可能会有点问题，这里建议用随波逐流解密。&lt;/p>
+&lt;h2 id="锟斤拷">锟斤拷
+&lt;/h2>&lt;p>Notepad++里直接转成utf-8。&lt;/p>
+&lt;h2 id="键盘坐标密码">键盘坐标密码
+&lt;/h2>&lt;p>参考moectf-2024&lt;code>捂住一只耳&lt;/code>。&lt;/p>
+&lt;h2 id="福尔摩斯密码">福尔摩斯密码
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">·-· ·-· ·-· ·-· ·-· ·-· ·
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>直接网上查找福尔摩斯密码对照表即可 flag{RRRRRRE}&lt;/p>
+&lt;h2 id="手机九宫格键盘密码">手机九宫格键盘密码
+&lt;/h2></description></item><item><title>BuildCTF WP Misc部分</title><link>https://XiaoYuan-420.gituhub.io/p/buildctf-wp-misc%E9%83%A8%E5%88%86/</link><pubDate>Thu, 24 Oct 2024 22:35:40 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/buildctf-wp-misc%E9%83%A8%E5%88%86/</guid><description>&lt;h1 id="buildctf-wp-misc部分">BuildCTF WP Misc部分
 &lt;/h1>&lt;p>&lt;em>第一次和各位师傅把misc AK了，太强了，太有成就感了！感谢各位&lt;/em>&lt;/p>
 &lt;h2 id="what-is-this">what is this?
 &lt;/h2>&lt;p>from binary得到&lt;/p>
