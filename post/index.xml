@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/post/</link><description>Recent content in Posts on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Sun, 19 Jan 2025 21:25:32 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>提问的智慧</title><link>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</link><pubDate>Sun, 19 Jan 2025 21:25:32 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</guid><description>&lt;h1 id="前言">前言
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 萧垣的博客</title><link>https://XiaoYuan-420.gituhub.io/post/</link><description>Recent content in Posts on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>2024211570@bupt.cn (XiaoYuan)</managingEditor><webMaster>2024211570@bupt.cn (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Thu, 27 Mar 2025 21:12:32 +0800</lastBuildDate><atom:link href="https://XiaoYuan-420.gituhub.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>程序的机器级表示 - 1</title><link>https://XiaoYuan-420.gituhub.io/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA-1/</link><pubDate>Thu, 27 Mar 2025 21:12:32 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA-1/</guid><description>&lt;h1 id="程序的机器级表示">程序的机器级表示
+&lt;/h1>&lt;ul>
+&lt;li>&lt;code>编译器&lt;/code> 基于&lt;strong>编程语言的规则、操作系统的惯例、目标机器的指令集&lt;/strong>生成机器代码。&lt;/li>
+&lt;li>&lt;code>汇编代码&lt;/code> 是机器代码的一种形式，它是机器代码的文本表示。&lt;/li>
+&lt;li>高级代码可移植性好，而&lt;strong>汇编代码与特定机器密切相关&lt;/strong>。
+&lt;em>基于x86-64&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h2 id="32-程序编码">3.2 程序编码
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ gcc -Og -o p p1.c p2.c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>-Og: 生成符合原始C代码整体结构的机器代码的优化等级。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Step1：&lt;em>C预处理器&lt;/em> 插入所有用&lt;code>#include&lt;/code>命令指定的文件，并拓展&lt;code>#define&lt;/code>指定的宏&lt;/li>
+&lt;li>Step2：&lt;em>编译器&lt;/em>产生两个源文件的汇编代码，分别为&lt;code>p1.s&lt;/code>和&lt;code>p2.s&lt;/code>。&lt;/li>
+&lt;li>Step3：&lt;em>汇编器&lt;/em>将汇编代码转化成&lt;em>二进制目标代码文件&lt;/em>&lt;code>p1.o&lt;/code>和&lt;code>p2.o&lt;/code>，是机器代码的一种形式，它包含二进制形式表示的所有指令，但还没有填入全局值的地址。&lt;/li>
+&lt;li>Step4：&lt;em>链接器&lt;/em>将两个目标代码文件与实现库函数的代码合并，并产生最终的可执行代码文件&lt;code>p&lt;/code>（&lt;code>-o&lt;/code>后指定的文件名）&lt;/li>
+&lt;/ul>&lt;/blockquote>
+&lt;h3 id="321-机器级代码">3.2.1 机器级代码
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>两种抽象模型：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>指令集架构/ISA&lt;/strong>：定义了处理器状态、指令的格式、指令对状态的影响。&lt;/li>
+&lt;li>&lt;strong>虚拟地址&lt;/strong>：机器代码将内存看成一个按字节寻址的数组。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>对机器代码可见的处理器状态：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>程序计数器/PC&lt;/strong>：在x86-64中用&lt;code>%rip&lt;/code>表示，给出将要执行的下一条指令在内存中的地址。&lt;/li>
+&lt;li>&lt;strong>整数寄存器文件&lt;/strong>：16个命名位置，存储64位值，存储地址或整数数据，保存临时数据或重要的程序状态。&lt;/li>
+&lt;li>&lt;strong>条件码寄存器&lt;/strong>：保存最近执行的算术或逻辑指令的状态信息，如&lt;code>if&lt;/code>和&lt;code>while&lt;/code>语句。&lt;/li>
+&lt;li>&lt;strong>向量寄存器&lt;/strong>：保存一个或多个整数或浮点数值。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>C 语言中的数组和结构，在机器代码中用一组连续的字节来表示。
+汇编代码不区分有符号数和无符号数，不区分指针的不同类型，不区分指针和整数。&lt;/p>
+&lt;p>一条机器指令只执行一个非常基本的操作。&lt;/p>&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>程序内存
+包含程序的可执行机器代码，操作系统需要的一些信息，栈和堆（用户分配的内存块）。&lt;/p>
+&lt;p>使用&lt;strong>虚拟地址&lt;/strong>来寻址，这些地址的&lt;em>高16位必须设0&lt;/em>，操作系统负责管理虚拟地址空间，将虚拟地址翻译成实际处理器内存中的物理地址&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>提问的智慧</title><link>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</link><pubDate>Sun, 19 Jan 2025 21:25:32 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</guid><description>&lt;h1 id="前言">前言
 &lt;/h1>&lt;p>本人 &lt;code>ISFJ&lt;/code>，非常乐意为大家解决问题，特别是一些技术问题。但是要知道，这种问题通常来说不是很好解决。但很遗憾的是，提问者通常不能提供解决问题所需的一些信息，以下是推荐所有人阅读的&lt;strong>提问的智慧&lt;/strong>以及我自己的一些建议。同时，在帮他人解决问题时我也会尽力遵循&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e6%9b%b4%e5%a5%bd%e5%9c%b0%e5%9b%9e%e7%ad%94%e9%97%ae%e9%a2%98" >如何更好地回答问题&lt;/a>&lt;/p>
 &lt;ol>
 &lt;li>选一个好一点的搜索引擎/AI。&lt;/li>
