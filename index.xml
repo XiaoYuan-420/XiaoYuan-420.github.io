@@ -2,9 +2,9 @@
 &lt;/h1>&lt;ul>
 &lt;li>&lt;code>编译器&lt;/code> 基于&lt;strong>编程语言的规则、操作系统的惯例、目标机器的指令集&lt;/strong>生成机器代码。&lt;/li>
 &lt;li>&lt;code>汇编代码&lt;/code> 是机器代码的一种形式，它是机器代码的文本表示。&lt;/li>
-&lt;li>高级代码可移植性好，而&lt;strong>汇编代码与特定机器密切相关&lt;/strong>。
-&lt;em>基于x86-64&lt;/em>&lt;/li>
+&lt;li>&lt;code>高级代码&lt;/code>可移植性好，而&lt;strong>汇编代码与特定机器密切相关&lt;/strong>。&lt;/li>
 &lt;/ul>
+&lt;p>下文讨论&lt;em>基于x86-64&lt;/em>架构&lt;/p>
 &lt;h2 id="32-程序编码">3.2 程序编码
 &lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
