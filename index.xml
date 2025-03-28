@@ -11,7 +11,7 @@
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ gcc -Og -o p p1.c p2.c
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$gcc&lt;/span> -Og -o p p1.c p2.c
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ul>
@@ -50,6 +50,174 @@
 &lt;p>程序内存
 包含程序的可执行机器代码，操作系统需要的一些信息，栈和堆（用户分配的内存块）。&lt;/p>
 &lt;p>使用&lt;strong>虚拟地址&lt;/strong>来寻址，这些地址的&lt;em>高16位必须设0&lt;/em>，操作系统负责管理虚拟地址空间，将虚拟地址翻译成实际处理器内存中的物理地址&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="322-代码实例">3.2.2 代码实例
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-C" data-lang="C">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//mstore.c
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kt">long&lt;/span> &lt;span class="nf">mult2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">long&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">long&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">multstore&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">long&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">dest&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">long&lt;/span> &lt;span class="n">t&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">mult2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">*&lt;/span>&lt;span class="n">dest&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">t&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用命令行生成汇编文件&lt;code>mstore.s&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$gcc&lt;/span> -Og -S mstore.c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>汇编代码包含&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">pushq&lt;/span> &lt;span class="nv">%rbx&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movq&lt;/span> &lt;span class="nv">%rdx&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">%rbx&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">call&lt;/span> &lt;span class="no">mult2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movq&lt;/span> &lt;span class="nv">%rax&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">%rbx&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">popq&lt;/span> &lt;span class="nv">%rbx&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">ret&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用命令行编译并汇编该代码产生二进制目标代码文件&lt;code>mstore.o&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$gcc&lt;/span> -Og -c mstore.c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可以使用&lt;em>反汇编器&lt;/em>查看机器代码的内容，在命令行中&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$objdump&lt;/span> -d mstore.o
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>结果如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">Offset&lt;/span> &lt;span class="no">Bytes&lt;/span> &lt;span class="no">Equivalent&lt;/span> &lt;span class="no">assembly&lt;/span> &lt;span class="no">language&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">0:&lt;/span> &lt;span class="err">53&lt;/span> &lt;span class="nf">push&lt;/span> &lt;span class="nv">%rbx&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">1:&lt;/span> &lt;span class="err">48&lt;/span> &lt;span class="err">89&lt;/span> &lt;span class="nf">d3&lt;/span> &lt;span class="no">mov&lt;/span> &lt;span class="nv">%rdx&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">%rbx&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">4:&lt;/span> &lt;span class="nf">e8&lt;/span> &lt;span class="mi">00&lt;/span> &lt;span class="mi">00&lt;/span> &lt;span class="mi">00&lt;/span> &lt;span class="mi">00&lt;/span> &lt;span class="no">callq&lt;/span> &lt;span class="mh">9&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="no">multstore&lt;/span>&lt;span class="p">+&lt;/span>&lt;span class="mi">0x9&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">9:&lt;/span> &lt;span class="err">48&lt;/span> &lt;span class="err">89&lt;/span> &lt;span class="err">03&lt;/span> &lt;span class="nf">mov&lt;/span> &lt;span class="nv">%rax&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">%rbx&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nl">c:&lt;/span> &lt;span class="err">5&lt;/span>&lt;span class="nf">b&lt;/span> &lt;span class="no">pop&lt;/span> &lt;span class="nv">%rbx&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nl">d:&lt;/span> &lt;span class="nf">c3&lt;/span> &lt;span class="no">retq&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>机器代码与反汇编表示的特性：&lt;/p>
+&lt;ol>
+&lt;li>x86-64 的指令长度范围为&lt;strong>1~15 字节&lt;/strong>。常用指令和操作数少的指令所需字节少。&lt;/li>
+&lt;li>从十六进制字节值到汇编指令，格式为：&lt;strong>某个数字唯一地对应某个汇编指令&lt;/strong>，比如 mov 指令以 48 开头。&lt;/li>
+&lt;li>指令结尾的 &amp;lsquo;q&amp;rsquo; 是大小指示符，大多数情况下可以省略。&lt;/li>
+&lt;/ol>
+&lt;p>从源程序转换来的可执行目标文件中，除了程序过程的代码，还包含启动和终止程序的代码，与操作系统交互的代码。&lt;/p>
+&lt;p>链接器的任务之一就是&lt;strong>为函数调用找到匹配的函数的可执行代码的位置&lt;/strong>。&lt;/p>
+&lt;h3 id="323-关于格式的注解">3.2.3 关于格式的注解
+&lt;/h3>&lt;p>所有以&lt;code>.&lt;/code>开头的行都是指导汇编器和连接器工作的伪指令&lt;/p>
+&lt;h2 id="33-数据格式">3.3 数据格式
+&lt;/h2>&lt;ol>
+&lt;li>数据类型
+&lt;ul>
+&lt;li>byte 字节 8位&lt;/li>
+&lt;li>word 字 16位数据&lt;/li>
+&lt;li>double word 双字 32位数据&lt;/li>
+&lt;li>quad word 四字 64位数据
+对应的指令后缀：&lt;code>movb, movw, movl, movq&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>这里说的都是整数，浮点数使用一组完全不同的指令和寄存器。&lt;/p>
+&lt;h2 id="34-访问信息">3.4 访问信息
+&lt;/h2>&lt;p>16组64位值的&lt;em>通用目的寄存器&lt;/em>,用来存储整数数据和指针。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">63 31 15 ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%rax %eax %ax &amp;lt;- 返回值
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%rbx %ebx %bx &amp;lt;- 被调用者保存
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%rcx %ecx %cx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%rdx %edx %dx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%rsi %esi %si
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%rdi %edi %di
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%rbp %ebp %bp &amp;lt;- 调用者保存
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%rsp %esp %sp &amp;lt;- 栈指针
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%r8 %r8d %r8w
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%r9 %r9d %r9w
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%r10 %r10d %r10w
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%r11 %r11d %r11w
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%r12 %r12d %r12w
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%r13 %r13d %r13w
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%r14 %r14d %r14w
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%r15 %r15d %r15w
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>低位操作的规则&lt;/strong>：&lt;/p>
+&lt;ol>
+&lt;li>将寄存器作为目标位置时，生成字节和字的指令会保持剩下的字节不变&lt;/li>
+&lt;li>生成双字的指令会把高位四字节置为 0&lt;/li>
+&lt;/ol>
+&lt;h3 id="341-操作数指示符">3.4.1 操作数指示符
+&lt;/h3>&lt;ol>
+&lt;li>操作数类型
+&lt;ol>
+&lt;li>立即数：表示常数值，书写方式是&lt;code>$&lt;/code>后跟整数，如&lt;code>$-577, $0x1F&lt;/code>&lt;/li>
+&lt;li>寄存器：将16个寄存器的低位1字节、2字节、4字节或8字节中的一个作为操作时，用$r_a$表示任意寄存器&lt;code>a&lt;/code>，我们将寄存器集合看成一个数组&lt;code>R&lt;/code>，用$R[r_a]$表示寄存器$r_a$的值&lt;/li>
+&lt;li>内存引用：根据&lt;strong>有效地址&lt;/strong>访问某个地址位置。我们将内存看成一个很大的字节数组，用符号$M_b[Addr]$表示对存储在内存中从地址&lt;code>Addr&lt;/code>开始的&lt;code>b&lt;/code>个字节的引用。&lt;/li>
+&lt;/ol>
 &lt;/li>
 &lt;/ol></description></item><item><title>提问的智慧</title><link>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</link><pubDate>Sun, 19 Jan 2025 21:25:32 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</guid><description>&lt;h1 id="前言">前言
 &lt;/h1>&lt;p>本人 &lt;code>ISFJ&lt;/code>，非常乐意为大家解决问题，特别是一些技术问题。但是要知道，这种问题通常来说不是很好解决。但很遗憾的是，提问者通常不能提供解决问题所需的一些信息，以下是推荐所有人阅读的&lt;strong>提问的智慧&lt;/strong>以及我自己的一些建议。同时，在帮他人解决问题时我也会尽力遵循&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e6%9b%b4%e5%a5%bd%e5%9c%b0%e5%9b%9e%e7%ad%94%e9%97%ae%e9%a2%98" >如何更好地回答问题&lt;/a>&lt;/p>
