@@ -163,7 +163,7 @@
 &lt;/li>
 &lt;/ol>
 &lt;p>这里说的都是整数，浮点数使用一组完全不同的指令和寄存器。&lt;/p>
-&lt;h2 id="34-访问信息">3.4 访问信息
+&lt;h2 id="34访问信息">3.4访问信息
 &lt;/h2>&lt;p>16组64位值的&lt;em>通用目的寄存器&lt;/em>,用来存储整数数据和指针。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -219,7 +219,83 @@
 &lt;li>内存引用：根据&lt;strong>有效地址&lt;/strong>访问某个地址位置。我们将内存看成一个很大的字节数组，用符号$M_b[Addr]$表示对存储在内存中从地址&lt;code>Addr&lt;/code>开始的&lt;code>b&lt;/code>个字节的引用。&lt;/li>
 &lt;/ol>
 &lt;/li>
-&lt;/ol></description></item><item><title>提问的智慧</title><link>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</link><pubDate>Sun, 19 Jan 2025 21:25:32 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</guid><description>&lt;h1 id="前言">前言
+&lt;li>寻址类型：
+$$Imm(r_b, r_i, s)$$
+$Imm$-立即数偏移，$r_b$-基址寄存器，$r_i$-变址寄存器，$s$-比例因子，$s$必须是1,2,4,8。基址和变址寄存器必须是64位寄存器。有效地址被计算为$Imm+R[r_b]+R[r_i] \cdot s$。&lt;/li>
+&lt;/ol>
+&lt;h3 id="342-数据传送指令">3.4.2 数据传送指令
+&lt;/h3>&lt;h4 id="mov类">MOV类
+&lt;/h4>&lt;p>把数据从原位置复制到目的位置，不做任何变化&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="err">指令&lt;/span> &lt;span class="err">效果&lt;/span> &lt;span class="err">描述&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">MOV&lt;/span> &lt;span class="no">S&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span>&lt;span class="err">←&lt;/span>&lt;span class="no">S&lt;/span> &lt;span class="err">传送&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movb&lt;/span> &lt;span class="err">传送字节&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movw&lt;/span> &lt;span class="err">传送字&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movl&lt;/span> &lt;span class="err">传送双字&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movq&lt;/span> &lt;span class="err">传送四字&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movabsq&lt;/span> &lt;span class="no">I&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="no">R&lt;/span> &lt;span class="no">R&lt;/span>&lt;span class="err">←&lt;/span>&lt;span class="no">I&lt;/span> &lt;span class="err">传送绝对的四字&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>源操作数是一个立即数，存储在寄存器中或内存中；目的操作数要么是一个寄存器要么是一个内存地址。x86-64传输指令的两个操作数不能都指向内存位置，需要将原值加载到寄存器中，再将寄存器写入目的位置。&lt;/p>
+&lt;p>这些指令的寄存器操作数可以是&lt;a class="link" href="#3.4%e8%ae%bf%e9%97%ae%e4%bf%a1%e6%81%af" >十六个寄存器&lt;/a>有标号部分中的任意一个，寄存器部分大小必须与指令最后一个字符指定的大小匹配。&lt;/p>
+&lt;h4 id="movz类">MOVZ类
+&lt;/h4>&lt;p>movz 系列和 movs 系列可以把较小的源值复制到较大的目的，目的都是寄存器。&lt;/p>
+&lt;p>movz 将目的寄存器剩余字节做零扩展，movs 做符号扩展&lt;/p>
+&lt;p>movz类：movzbw, movzbl, movzbq, movzwl, movzwq（movzbw 即从字节复制到字，其他类似）&lt;/p>
+&lt;p>movs类：movsbw, movsbl, movsbq, movswl, movswq, movslq, cltq&lt;/p>
+&lt;ul>
+&lt;li>cltq：没有操作数，将 eax 符号扩展到 rax，等价于 movslq %eax,%rax&lt;/li>
+&lt;/ul>
+&lt;h3 id="343-数据传送示例">3.4.3 数据传送示例
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">long&lt;/span> &lt;span class="nf">exchage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">long&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">xp&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">long&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">xp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">*&lt;/span>&lt;span class="n">xp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="nl">exchage:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">movq&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">%rdi&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="nv">%rax&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">movq&lt;/span> &lt;span class="nv">%rsi&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">%rdi&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">ret&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这段编汇代码中有两点值得注意：&lt;/p>
+&lt;ul>
+&lt;li>&amp;ldquo;指针&amp;quot;其实就是地址。间接引用指针就是将指针放在一个寄存器中。&lt;/li>
+&lt;li>局部变量通常保存在寄存器中。&lt;/li>
+&lt;li>访问寄存器哔访问内存要快得多。&lt;/li>
+&lt;li>强制类型转换是通过 mov 指令实现的。&lt;/li>
+&lt;/ul>
+&lt;h3 id="344-压入和弹出栈数据">3.4.4 压入和弹出栈数据🌟
+&lt;/h3></description></item><item><title>提问的智慧</title><link>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</link><pubDate>Sun, 19 Jan 2025 21:25:32 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</guid><description>&lt;h1 id="前言">前言
 &lt;/h1>&lt;p>本人 &lt;code>ISFJ&lt;/code>，非常乐意为大家解决问题，特别是一些技术问题。但是要知道，这种问题通常来说不是很好解决。但很遗憾的是，提问者通常不能提供解决问题所需的一些信息，以下是推荐所有人阅读的&lt;strong>提问的智慧&lt;/strong>以及我自己的一些建议。同时，在帮他人解决问题时我也会尽力遵循&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e6%9b%b4%e5%a5%bd%e5%9c%b0%e5%9b%9e%e7%ad%94%e9%97%ae%e9%a2%98" >如何更好地回答问题&lt;/a>&lt;/p>
 &lt;ol>
 &lt;li>选一个好一点的搜索引擎/AI。&lt;/li>
