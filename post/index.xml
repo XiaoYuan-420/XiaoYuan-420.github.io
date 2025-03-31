@@ -243,7 +243,7 @@ $Imm$-立即数偏移，$r_b$-基址寄存器，$r_i$-变址寄存器，$s$-比�
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movw&lt;/span> &lt;span class="err">传送字&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movl&lt;/span> &lt;span class="err">传送双字&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movq&lt;/span> &lt;span class="err">传送四字&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movabsq&lt;/span> &lt;span class="no">I&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="no">R&lt;/span> &lt;span class="no">R&lt;/span>&lt;span class="err">←&lt;/span>&lt;span class="no">I&lt;/span> &lt;span class="err">传送绝对的四字&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movabsq&lt;/span> &lt;span class="no">I&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">R&lt;/span> &lt;span class="no">R&lt;/span>&lt;span class="err">←&lt;/span>&lt;span class="no">I&lt;/span> &lt;span class="err">传送绝对的四字&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>源操作数是一个立即数，存储在寄存器中或内存中；目的操作数要么是一个寄存器要么是一个内存地址。x86-64传输指令的两个操作数不能都指向内存位置，需要将原值加载到寄存器中，再将寄存器写入目的位置。&lt;/p>
@@ -291,7 +291,7 @@ $Imm$-立即数偏移，$r_b$-基址寄存器，$r_i$-变址寄存器，$s$-比�
 &lt;ul>
 &lt;li>&amp;ldquo;指针&amp;quot;其实就是地址。间接引用指针就是将指针放在一个寄存器中。&lt;/li>
 &lt;li>局部变量通常保存在寄存器中。&lt;/li>
-&lt;li>访问寄存器哔访问内存要快得多。&lt;/li>
+&lt;li>访问寄存器比访问内存要快得多。&lt;/li>
 &lt;li>强制类型转换是通过 mov 指令实现的。&lt;/li>
 &lt;/ul>
 &lt;h3 id="344-压入和弹出栈数据">3.4.4 压入和弹出栈数据🌟
