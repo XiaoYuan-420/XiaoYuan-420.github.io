@@ -238,12 +238,12 @@ $Imm$-立即数偏移，$r_b$-基址寄存器，$r_i$-变址寄存器，$s$-比�
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="err">指令&lt;/span> &lt;span class="err">效果&lt;/span> &lt;span class="err">描述&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">MOV&lt;/span> &lt;span class="no">S&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span>&lt;span class="err">←&lt;/span>&lt;span class="no">S&lt;/span> &lt;span class="err">传送&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">MOV&lt;/span> &lt;span class="no">S&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">S&lt;/span> &lt;span class="err">传送&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movb&lt;/span> &lt;span class="err">传送字节&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movw&lt;/span> &lt;span class="err">传送字&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movl&lt;/span> &lt;span class="err">传送双字&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movq&lt;/span> &lt;span class="err">传送四字&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movabsq&lt;/span> &lt;span class="no">I&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">R&lt;/span> &lt;span class="no">R&lt;/span>&lt;span class="err">←&lt;/span>&lt;span class="no">I&lt;/span> &lt;span class="err">传送绝对的四字&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movabsq&lt;/span> &lt;span class="no">I&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">R&lt;/span> &lt;span class="no">R&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">I&lt;/span> &lt;span class="err">传送绝对的四字&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>源操作数是一个立即数，存储在寄存器中或内存中；目的操作数要么是一个寄存器要么是一个内存地址。x86-64传输指令的两个操作数不能都指向内存位置，需要将原值加载到寄存器中，再将寄存器写入目的位置。&lt;/p>
@@ -295,7 +295,107 @@ $Imm$-立即数偏移，$r_b$-基址寄存器，$r_i$-变址寄存器，$s$-比�
 &lt;li>强制类型转换是通过 mov 指令实现的。&lt;/li>
 &lt;/ul>
 &lt;h3 id="344-压入和弹出栈数据">3.4.4 压入和弹出栈数据🌟
-&lt;/h3></description></item><item><title>提问的智慧</title><link>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</link><pubDate>Sun, 19 Jan 2025 21:25:32 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</guid><description>&lt;h1 id="前言">前言
+&lt;/h3>&lt;ol>
+&lt;li>栈：&amp;ldquo;后进先出&amp;quot;的数据结构，通过push操作把数据压入栈中，通过pop操作删除数据&lt;/li>
+&lt;li>x86-64中的实现：
+&lt;ul>
+&lt;li>x86-64中，栈是向下增长的，栈底位于较高的地址，栈顶的元素的地址是所有栈中元素地址最低的。&lt;/li>
+&lt;li>栈指针&lt;code>%rsp&lt;/code>保存着栈顶的地址&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">pushq&lt;/span> &lt;span class="no">S&lt;/span> &lt;span class="no">R&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">%rsp&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">R&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">%rsp&lt;/span>&lt;span class="p">]-&lt;/span>&lt;span class="mi">8&lt;/span>&lt;span class="c1">;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nf">M&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="no">R&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">%rsp&lt;/span>&lt;span class="p">]]&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">S&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">popq&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">M&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="no">R&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">%rsp&lt;/span>&lt;span class="p">]]&lt;/span>&lt;span class="c1">;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nf">R&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">%rsp&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">R&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">%rsp&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">+&lt;/span>&lt;span class="mi">8&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>指令&lt;code>pushq %rsp&lt;/code>的行为等价于
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">subq&lt;/span> &lt;span class="no">$8&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nv">%rsp&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movq&lt;/span> &lt;span class="nv">%rbp&lt;/span>&lt;span class="p">,(&lt;/span>&lt;span class="nv">%rsp&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>指令&lt;code>popq %rax&lt;/code>的行为等价于
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">movq&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">%rsp&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="nv">%rax&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">addq&lt;/span> &lt;span class="no">$8&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nv">%rsp&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>栈的插入和弹出操作是针对指针而言的，在弹出后，值仍然会保存在原本的内存位置中，直到被覆盖。&lt;/li>
+&lt;li>&lt;strong>栈和程序代码以及其他形式的程序数据都是放在同一内存中&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="算术和逻辑操作">算术和逻辑操作
+&lt;/h2>&lt;ul>
+&lt;li>除leaq外，其他指令都有带不同大小操作数的变种。&lt;/li>
+&lt;li>这些操作被分为四组：&lt;code>加载有效地址、一元操作、二元操作和位移&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-asm" data-lang="asm">&lt;span class="line">&lt;span class="cl">&lt;span class="err">指令&lt;/span> &lt;span class="err">效果&lt;/span> &lt;span class="err">描述&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">leaq&lt;/span> &lt;span class="no">S&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="err">&amp;amp;&lt;/span>&lt;span class="no">S&lt;/span> &lt;span class="err">加载有效地址&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">INC&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">+&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="err">加&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">DEC&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="p">-&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="err">减&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">NEG&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="no">D&lt;/span> &lt;span class="err">取负&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">NOT&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="err">~&lt;/span>&lt;span class="no">D&lt;/span> &lt;span class="err">取补&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">ADD&lt;/span> &lt;span class="no">S&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">+&lt;/span> &lt;span class="no">S&lt;/span> &lt;span class="err">加&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">SUB&lt;/span> &lt;span class="no">S&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="p">-&lt;/span> &lt;span class="no">S&lt;/span> &lt;span class="err">减&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">IMUL&lt;/span> &lt;span class="no">S&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="p">*&lt;/span> &lt;span class="no">S&lt;/span> &lt;span class="err">乘&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">XOR&lt;/span> &lt;span class="no">S&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">^&lt;/span> &lt;span class="no">S&lt;/span> &lt;span class="err">异或&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">OR&lt;/span> &lt;span class="no">S&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">|&lt;/span> &lt;span class="no">S&lt;/span> &lt;span class="err">或&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">AND&lt;/span> &lt;span class="no">S&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> &lt;span class="no">S&lt;/span> &lt;span class="err">与&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">SAL&lt;/span> &lt;span class="no">k&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">&amp;lt;&amp;lt;&lt;/span> &lt;span class="no">k&lt;/span> &lt;span class="err">左移&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">SHL&lt;/span> &lt;span class="no">k&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">&amp;lt;&amp;lt;&lt;/span> &lt;span class="no">k&lt;/span> &lt;span class="err">左移（等同于&lt;/span>&lt;span class="no">SAL&lt;/span>&lt;span class="err">）&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">SAR&lt;/span> &lt;span class="no">k&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">&amp;gt;&amp;gt;&lt;/span> &lt;span class="no">k&lt;/span> &lt;span class="err">算术右移&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">SHR&lt;/span> &lt;span class="no">k&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">←&lt;/span> &lt;span class="no">D&lt;/span> &lt;span class="err">&amp;gt;&amp;gt;&lt;/span> &lt;span class="no">k&lt;/span> &lt;span class="err">逻辑右移&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>提问的智慧</title><link>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</link><pubDate>Sun, 19 Jan 2025 21:25:32 +0800</pubDate><author>2024211570@bupt.cn (XiaoYuan)</author><guid>https://XiaoYuan-420.gituhub.io/p/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</guid><description>&lt;h1 id="前言">前言
 &lt;/h1>&lt;p>本人 &lt;code>ISFJ&lt;/code>，非常乐意为大家解决问题，特别是一些技术问题。但是要知道，这种问题通常来说不是很好解决。但很遗憾的是，提问者通常不能提供解决问题所需的一些信息，以下是推荐所有人阅读的&lt;strong>提问的智慧&lt;/strong>以及我自己的一些建议。同时，在帮他人解决问题时我也会尽力遵循&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e6%9b%b4%e5%a5%bd%e5%9c%b0%e5%9b%9e%e7%ad%94%e9%97%ae%e9%a2%98" >如何更好地回答问题&lt;/a>&lt;/p>
 &lt;ol>
 &lt;li>选一个好一点的搜索引擎/AI。&lt;/li>
