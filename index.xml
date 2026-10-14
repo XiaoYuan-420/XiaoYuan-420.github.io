@@ -503,7 +503,7 @@ $$
 u_i=\frac{b s_i-c d_i}{ab-c^2},
 \qquad u_i^\top s_i=1,\quad u_i^\top d_i=0.
 $$&lt;p&gt;若 $ab-c^2$ 太接近零，两类平均向量几乎共线，计算会不稳定。&lt;/p&gt;
-&lt;p&gt;再记 $v_i=r_{d,i}-r_{s,i}$。v2 对权重施加的更新是&lt;/p&gt;
+&lt;p&gt;再记 $v_i=r_{d,i}-r_{s,i}$。这里对权重施加的更新是&lt;/p&gt;
 $$
 W'_i=W_i-\alpha\,v_i\bigl(u_i^\top W_i\bigr)
 =W_i+\operatorname{outer}\!\left(-\alpha v_i,\ u_i^\top W_i\right),
