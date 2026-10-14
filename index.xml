@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>萧垣的博客</title><link>https://sus-morn.tech/</link><description>Recent content on 萧垣的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>cwxiaoyuan@gmail.com (XiaoYuan)</managingEditor><webMaster>cwxiaoyuan@gmail.com (XiaoYuan)</webMaster><copyright>XiaoYuan</copyright><lastBuildDate>Wed, 14 Oct 2026 20:00:00 +0800</lastBuildDate><atom:link href="https://sus-morn.tech/index.xml" rel="self" type="application/rss+xml"/><item><title>TSCTF-J 2026 It 系列 WP</title><link>https://sus-morn.tech/p/tsctf-j-2026-it-series-wp/</link><pubDate>Wed, 14 Oct 2026 20:00:00 +0800</pubDate><author>cwxiaoyuan@gmail.com (XiaoYuan)</author><guid>https://sus-morn.tech/p/tsctf-j-2026-it-series-wp/</guid><description>&lt;h2 id="misc"&gt;Misc
-&lt;/h2&gt;&lt;p&gt;+++++&lt;/p&gt;
-&lt;h3 id="playit"&gt;PlayIt
+&lt;/h2&gt;&lt;h3 id="playit"&gt;PlayIt
 &lt;/h3&gt;&lt;p&gt;just for fun，这里还是要简要介绍一下z3这个库，对于数独这类比较典型的约束求解问题，其实使用z3会比绝大多数师傅在wp中提到的&lt;code&gt;位集合回溯&lt;/code&gt;的写法要便捷，可以看这篇博客&lt;a class="link" href="https://snow233.github.io/2025/03/11/Z3-solver%E5%AD%A6%E4%B9%A0/index.html" target="_blank" rel="noopener"
 &gt;solver学习 | Snow&amp;rsquo;s Blog&lt;/a&gt;，下面给出解题的代码&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -187,9 +186,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;+++++
-+++++++&lt;/p&gt;
-&lt;h3 id="repairit"&gt;RepairIt
+&lt;/div&gt;&lt;h3 id="repairit"&gt;RepairIt
 &lt;/h3&gt;&lt;p&gt;这里先给出损坏文件与源文件的diff，并贴出&lt;a class="link" href="https://www.cnblogs.com/liert/p/17089779.html" target="_blank" rel="noopener"
 &gt;PE文件结构的学习链接&lt;/a&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -403,11 +400,8 @@ class="gallery-image"
 data-flex-grow="187"
 data-flex-basis="448px"
 &gt;&lt;/p&gt;
-&lt;p&gt;+++++++
-++++++++&lt;/p&gt;
 &lt;h2 id="ai"&gt;AI
-&lt;/h2&gt;&lt;p&gt;++++++&lt;/p&gt;
-&lt;h3 id="rejectit"&gt;RejectIt
+&lt;/h2&gt;&lt;h3 id="rejectit"&gt;RejectIt
 &lt;/h3&gt;&lt;p&gt;这道题是要让模型拒绝回答所有问题，解法比较多，看师傅们交上来的WP基本都是往固定的词上走，这里给出一个更通用的方法。之所以是更通用一方面是因为模型的回答还是有意义的，另一方面是这版思路只要改一个符号就能解决很多问题，出于技术伦理的问题这里就不展开。&lt;/p&gt;
 &lt;p&gt;这里我们先引入一个概念叫&lt;strong&gt;拒绝向量&lt;/strong&gt;：拒绝向量（Refusal Vector） 是模型残差流（residual stream）激活空间中的一个一维方向，该方向在最后一个 token 位置上的分量强度线性编码了模型“是否应该拒绝当前请求”的判断，由Andy Arditi、Oscar Obeso 等人的论文&lt;a class="link" href="https://arxiv.org/abs/2406.11717" target="_blank" rel="noopener"
 &gt;《Refusal in Language Models Is Mediated by a Single Direction》&lt;/a&gt;提出。&lt;/p&gt;
@@ -1280,9 +1274,7 @@ data-flex-basis="571px"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;++++++
-+++++++
-++++++&lt;/p&gt;</description></item><item><title>Small Talk</title><link>https://sus-morn.tech/p/small-talk/</link><pubDate>Tue, 02 Dec 2025 18:13:49 +0800</pubDate><author>cwxiaoyuan@gmail.com (XiaoYuan)</author><guid>https://sus-morn.tech/p/small-talk/</guid><description>&lt;h1 id="以狂欢看互联网舆论场"&gt;以“狂欢”看互联网舆论场
+&lt;/div&gt;</description></item><item><title>Small Talk</title><link>https://sus-morn.tech/p/small-talk/</link><pubDate>Tue, 02 Dec 2025 18:13:49 +0800</pubDate><author>cwxiaoyuan@gmail.com (XiaoYuan)</author><guid>https://sus-morn.tech/p/small-talk/</guid><description>&lt;h1 id="以狂欢看互联网舆论场"&gt;以“狂欢”看互联网舆论场
 &lt;/h1&gt;&lt;h2 id="前言"&gt;前言
 &lt;/h2&gt;&lt;p&gt;近期互联网的舆论场处于一种爆炸的状态，从“影视飓风电子垃圾事件”，“影视飓风Tim相亲事件”到“治安管理处罚法新规”以及之后的“逍遥散人”，在我写这篇文章的时候又爆出了“桃黑黑14条澄清与回应”。深度了解了一下前面三个事情，最后一件简单了解了一下，不难看出现在的互联网沉迷于造神、捧神再弑神的狂欢之中。现在的简中互联网有理性、有批判思维的用户太少，乌泱泱一片乌合之众。习总书记在中共中央政治局第二十三次集体学习时强调：“健全网络生态治理长效机制，持续营造风清气正的网络空间”，看起来是任重道远。正好最近也很荣幸能参与到一个舆情分析系统项目中，想从这几件事出发谈谈我对“舆论场”看法。本人文笔不佳，有些观点可能有失偏颇，欢迎各位批评指正。&lt;/p&gt;
 &lt;h2 id="互联网舆论场变迁"&gt;互联网舆论场变迁
